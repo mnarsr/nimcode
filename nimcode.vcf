@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Sras;Manar;;;
+FN:Manar Sras
+ORG:nimcode
+TITLE:IT & Web Solutions
+TEL;TYPE=CELL:+4915226867404
+EMAIL;TYPE=INTERNET:info@nimcode.de
+URL:https://nimcode.de
+URL;TYPE=WhatsApp:https://wa.me/4915226867404
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/manar-sras/
+URL;TYPE=XING:https://www.xing.com/profile/Manar_Sras/web_profiles
+PHOTO;VALUE=URI:https://nimcode.de/assets/nimcode-contact-logo.png
+END:VCARD

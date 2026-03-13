@@ -9,101 +9,141 @@
     :root {
       --petrol: #0f3d3e;
       --petrol-soft: #4f6f70;
-      --bg: #f4f6f7;
+      --bg: #f3f5f6;
+      --card: rgba(255, 255, 255, 0.88);
       --text: #0e1114;
+      --muted: #6c7a7b;
+      --line: rgba(15, 61, 62, 0.10);
       --white: #ffffff;
-      --border: #d9e1e1;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
       min-height: 100vh;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(15, 61, 62, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(15, 61, 62, 0.05), transparent 30%),
+        var(--bg);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 20px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 460px;
     }
 
     .card {
-      width: 100%;
-      max-width: 460px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 24px;
-      box-shadow: 0 10px 30px rgba(15, 61, 62, 0.06);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px 20px 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow:
+        0 10px 30px rgba(15, 61, 62, 0.06),
+        0 1px 0 rgba(255,255,255,0.6) inset;
+      animation: fadeUp 0.55s ease-out both;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 22px;
     }
 
     .logo {
-      font-size: 2.3rem;
+      width: 88px;
+      height: 88px;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+      margin: 0 auto 16px;
+      box-shadow: 0 8px 20px rgba(15, 61, 62, 0.12);
+      animation: softFade 0.7s ease-out both;
+    }
+
+    .logo-text {
+      font-size: 2.2rem;
       font-weight: 700;
       line-height: 1;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
       color: var(--petrol);
-      text-align: center;
-      margin-bottom: 20px;
+      margin: 0;
+      animation: softFade 0.7s ease-out both;
     }
 
     .subtitle {
-      text-align: center;
+      margin: 10px 0 0;
+      font-size: 0.95rem;
       color: var(--petrol-soft);
-      font-size: 0.98rem;
-      margin-bottom: 28px;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 26px;
     }
 
     .person {
       text-align: center;
-      margin-bottom: 28px;
     }
 
     .person h1 {
-      margin: 0 0 8px;
-      font-size: 1.8rem;
+      margin: 0;
+      font-size: 1.55rem;
       line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--text);
+      letter-spacing: -0.04em;
     }
 
     .person p {
-      margin: 0;
-      font-size: 1rem;
-      color: var(--petrol-soft);
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
     }
 
     .actions {
       display: grid;
       gap: 12px;
+      margin-bottom: 22px;
     }
 
     .btn {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 12px;
       width: 100%;
-      min-height: 54px;
-      padding: 14px 18px;
-      border-radius: 14px;
+      min-height: 58px;
+      padding: 14px 16px;
+      border-radius: 18px;
       text-decoration: none;
-      font-weight: 600;
       font-size: 1rem;
-      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+      font-weight: 600;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
       border: 1px solid transparent;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
     .btn-primary {
       background: var(--petrol);
       color: var(--white);
+      box-shadow: 0 8px 18px rgba(15, 61, 62, 0.16);
     }
 
     .btn-primary:hover {
@@ -111,22 +151,46 @@
     }
 
     .btn-secondary {
-      background: var(--white);
-      color: var(--petrol);
-      border-color: var(--border);
+      background: rgba(255,255,255,0.82);
+      color: var(--text);
+      border-color: var(--line);
     }
 
     .btn-secondary:hover {
-      border-color: var(--petrol-soft);
-      background: #fafcfc;
+      border-color: rgba(15, 61, 62, 0.22);
+      box-shadow: 0 8px 18px rgba(15, 61, 62, 0.06);
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .btn-primary .icon svg {
+      stroke: currentColor;
+    }
+
+    .btn-secondary .icon svg {
+      stroke: var(--petrol);
     }
 
     .meta {
-      margin-top: 24px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
       text-align: center;
-      font-size: 0.92rem;
-      color: var(--petrol-soft);
-      line-height: 1.6;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.8;
     }
 
     .meta a {
@@ -134,63 +198,169 @@
       text-decoration: none;
     }
 
-    @media (max-width: 480px) {
+    .footer-note {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: #8a9596;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes softFade {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 420px) {
       body {
-        padding: 16px;
+        padding: 14px;
       }
 
       .card {
-        padding: 28px 18px;
-        border-radius: 18px;
+        border-radius: 24px;
+        padding: 24px 16px 18px;
       }
 
       .logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+      }
+
+      .logo-text {
         font-size: 2rem;
       }
 
       .person h1 {
-        font-size: 1.55rem;
+        font-size: 1.4rem;
       }
+
+      .btn {
+        min-height: 56px;
+        border-radius: 16px;
+      }
+
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <div class="logo">nimcode</div>
-    <div class="subtitle">Kontakt aufnehmen</div>
+  <main class="wrap">
+    <section class="card">
+      <div class="brand">
+        <img class="logo" src="/assets/nimcode-contact-logo.png" alt="nimcode Logo">
+        <h2 class="logo-text">nimcode</h2>
+        <p class="subtitle">Kontakt aufnehmen</p>
+      </div>
 
-    <section class="person">
-      <h1>Manar Sras</h1>
-      <p>IT &amp; Web Solutions</p>
+      <div class="profile">
+        <div class="person">
+          <h1>Manar Sras</h1>
+          <p>IT &amp; Web Solutions</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="/nimcode.vcf" download>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v12"></path>
+              <path d="M7 10l5 5 5-5"></path>
+              <path d="M5 19h14"></path>
+            </svg>
+          </span>
+          <span>Kontakt speichern</span>
+        </a>
+
+        <a class="btn btn-secondary" href="https://wa.me/4915226867404" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12a8 8 0 0 1-11.7 7.1L4 20l.9-4.1A8 8 0 1 1 20 12Z"></path>
+              <path d="M9.5 9.5c.3-.7.8-.7 1.1-.7h.3c.1 0 .3.1.4.3l.9 2c.1.2.1.4 0 .6l-.5.8c-.1.2-.1.4 0 .5.3.5 1 1.5 2.3 2.1.2.1.4.1.5 0l.8-.5c.2-.1.4-.1.6 0l1.9.9c.2.1.3.2.3.4v.3c0 .3 0 .8-.7 1.1-.6.3-1.8.3-3.4-.5-1.6-.8-3.6-2.7-4.6-4.4-1-1.8-1.1-2.9-.8-3.6Z"></path>
+            </svg>
+          </span>
+          <span>WhatsApp</span>
+        </a>
+
+        <a class="btn btn-secondary" href="mailto:info@nimcode.de">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="M3 7l9 6 9-6"></path>
+            </svg>
+          </span>
+          <span>E-Mail senden</span>
+        </a>
+
+        <a class="btn btn-secondary" href="tel:+4915226867404">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.6a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.3a2 2 0 0 1 2.1-.4c.8.4 1.7.6 2.6.7A2 2 0 0 1 22 16.9Z"></path>
+            </svg>
+          </span>
+          <span>Anrufen</span>
+        </a>
+
+        <a class="btn btn-secondary" href="https://nimcode.de" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3 12h18"></path>
+              <path d="M12 3a15 15 0 0 1 0 18"></path>
+              <path d="M12 3a15 15 0 0 0 0 18"></path>
+            </svg>
+          </span>
+          <span>Website besuchen</span>
+        </a>
+
+        <!--
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/manar-sras/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path>
+              <path d="M2 9h4v12H2Z"></path>
+              <path d="M4 4h.01"></path>
+            </svg>
+          </span>
+          <span>LinkedIn</span>
+        </a>
+
+        <a class="btn btn-secondary" href="https://www.xing.com/profile/Manar_Sras/web_profiles" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 6l3 5-4 7H3l4-7-3-5Z"></path>
+              <path d="M14 3h4l-5 9 4 6h-4l-4-6Z"></path>
+            </svg>
+          </span>
+          <span>XING</span>
+        </a>
+      </div>
+      -->
+
+      <div class="meta">
+        <div><a href="mailto:info@nimcode.de">info@nimcode.de</a></div>
+        <div><a href="tel:+4915226867404">+49 1522 6867404</a></div>
+        <div><a href="https://nimcode.de" target="_blank" rel="noopener noreferrer">nimcode.de</a></div>
+      </div>
     </section>
 
-    <section class="actions">
-      <a class="btn btn-primary" href="/nimcode-contact.vcf" download>
-        Kontakt speichern
-      </a>
-
-      <a class="btn btn-secondary" href="https://wa.me/4915226867404" target="_blank" rel="noopener noreferrer">
-        WhatsApp
-      </a>
-
-      <a class="btn btn-secondary" href="mailto:info@nimcode.de">
-        E-Mail senden
-      </a>
-
-      <a class="btn btn-secondary" href="tel:+4915226867404">
-        Anrufen
-      </a>
-
-      <a class="btn btn-secondary" href="https://nimcode.de" target="_blank" rel="noopener noreferrer">
-        Website besuchen
-      </a>
-    </section>
-
-    <div class="meta">
-      <div><a href="mailto:info@nimcode.de">info@nimcode.de</a></div>
-      <div><a href="tel:+4915226867404">+49 1522 6867404</a></div>
-      <div><a href="https://nimcode.de" target="_blank" rel="noopener noreferrer">nimcode.de</a></div>
-    </div>
+    <div class="footer-note">nimcode · digitale Lösungen</div>
+    
   </main>
 </body>
 </html>
