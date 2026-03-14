@@ -371,3 +371,27 @@ function initApp() {
 }
 
 initApp();
+const portfolioSlider = document.getElementById("portfolioSlider");
+const portfolioPrev = document.querySelector(".portfolio-prev");
+const portfolioNext = document.querySelector(".portfolio-next");
+
+if (portfolioSlider && portfolioPrev && portfolioNext) {
+  const scrollAmount = () => {
+    const card = portfolioSlider.querySelector(".portfolio-card");
+    return card ? card.getBoundingClientRect().width + 24 : 320;
+  };
+
+  portfolioPrev.addEventListener("click", () => {
+    portfolioSlider.scrollBy({
+      left: -scrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  portfolioNext.addEventListener("click", () => {
+    portfolioSlider.scrollBy({
+      left: scrollAmount(),
+      behavior: "smooth"
+    });
+  });
+}

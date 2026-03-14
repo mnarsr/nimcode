@@ -2,6 +2,14 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://nimcode.de/contact/">
+  <meta property="og:title" content="Kontakt – nimcode">
+<meta property="og:description" content="IT & Web Solutions – Kontakt aufnehmen.">
+<meta property="og:image" content="https://nimcode.de/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nimcode.de/contact/">
+  <meta name="theme-color" content="#0f3d3e">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – nimcode</title>
   <meta name="description" content="Kontaktseite von nimcode mit E-Mail, WhatsApp, Telefon und Kontakt speichern." />
@@ -149,7 +157,9 @@
     .btn-primary:hover {
       background: #145b5c;
     }
-
+.btn:active{
+ transform:translateY(0) scale(.98);
+}
     .btn-secondary {
       background: rgba(255,255,255,0.82);
       color: var(--text);
@@ -287,7 +297,11 @@
           <span>Kontakt speichern</span>
         </a>
 
-        <a class="btn btn-secondary" href="https://wa.me/4915226867404" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-secondary"
+   href="https://wa.me/4915226867404"
+   aria-label="WhatsApp Kontakt öffnen"
+   target="_blank"
+   rel="noopener noreferrer">
           <span class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 12a8 8 0 0 1-11.7 7.1L4 20l.9-4.1A8 8 0 1 1 20 12Z"></path>
