@@ -1,52 +1,518 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nimcode</title>
-<meta name="description" content="Private Projektseite – Nimcode">
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#0b1220;
-  color:#ffffff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  height:100vh;
-  text-align:center;
-}
-.box{
-  max-width:600px;
-}
-h1{
-  font-size:42px;
-  margin-bottom:20px;
-}
-p{
-  color:#aab6d3;
-  line-height:1.6;
-}
-.small{
-  margin-top:40px;
-  font-size:13px;
-  color:#8c9bbf;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <title>nimcode – Web, Software & Automatisierung</title>
+  <meta
+    name="description"
+    content="nimcode entwickelt moderne Websites, Software und Automatisierungslösungen für Unternehmen mit Fokus auf Struktur, Performance und professionelle digitale Präsenz."
+  >
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="nimcode – Web, Software & Automatisierung">
+  <meta
+    property="og:description"
+    content="Moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nimcode.de/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="nimcode – Web, Software & Automatisierung">
+  <meta
+    name="twitter:description"
+    content="Moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen."
+  >
+  <meta name="twitter:image" content="https://nimcode.de/og-image.jpg">
+
+  <link rel="canonical" href="https://nimcode.de/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/app.js" as="script">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"nimcode",
+    "url":"https://nimcode.de/",
+    "logo":"https://nimcode.de/logo.png",
+    "description":"Web-, Software- und Automatisierungslösungen für moderne Unternehmen.",
+    "sameAs":[
+      "https://www.linkedin.com/",
+      "https://www.xing.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
-<div class="box">
-  <h1>Nimcode</h1>
-  <p>
-    Diese Website befindet sich aktuell im Aufbau.
-  </p>
-  <p>
-    Es handelt sich derzeit um eine private Projektseite ohne gewerbliches Angebot.
-  </p>
-  <div class="small">
-    © 2026 Nimcode
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
   </div>
-</div>
+
+  <main>
+    <header class="header glass">
+      <div class="container nav">
+        <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          type="button"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="siteMenu"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+          <a href="#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+          <a href="#about" class="nav-link" data-de="Über uns" data-en="About">Über uns</a>
+          <a href="#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+          <a href="#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+          <a href="#faq" class="nav-link" data-de="FAQ" data-en="FAQ">FAQ</a>
+          <a href="#contact" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+
+          <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+          <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+          <a href="/contact/" class="cta" data-de="Projekt starten" data-en="Start project">Projekt starten</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero section">
+      <div class="gradient-bg" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow" data-de="Web · Software · Automatisierung" data-en="Web · Software · Automation">
+            Web · Software · Automatisierung
+          </span>
+
+          <h1
+            data-de="Digitale Lösungen, die professionell aussehen und sauber funktionieren."
+            data-en="Digital solutions that look professional and work cleanly."
+          >
+            Digitale Lösungen, die professionell aussehen und sauber funktionieren.
+          </h1>
+
+          <p
+            data-de="nimcode entwickelt moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen mit Fokus auf Struktur, Performance und nachhaltige technische Qualität."
+            data-en="nimcode builds modern websites, internal tools, and automation solutions for businesses with a focus on structure, performance, and sustainable technical quality."
+          >
+            nimcode entwickelt moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen mit Fokus auf Struktur, Performance und nachhaltige technische Qualität.
+          </p>
+
+          <div class="hero-actions">
+            <a href="/contact/" class="btn" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+            <a href="#portfolio" class="btn btn-secondary" data-de="Arbeiten ansehen" data-en="View work">Arbeiten ansehen</a>
+          </div>
+
+          <div class="hero-points">
+            <span data-de="Klare Struktur" data-en="Clear structure">Klare Struktur</span>
+            <span data-de="Moderne Technik" data-en="Modern technology">Moderne Technik</span>
+            <span data-de="Saubere Umsetzung" data-en="Clean execution">Saubere Umsetzung</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="floating-card card-accent"></div>
+          <div class="floating-card small"></div>
+          <div class="parallax-layer layer1"></div>
+          <div class="parallax-layer layer2"></div>
+          <div class="parallax-layer layer3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section counters">
+      <div class="container counter-grid">
+        <div>
+          <h3 class="counter" data-target="25">25</h3>
+          <p data-de="Projekte" data-en="Projects">Projekte</p>
+        </div>
+        <div>
+          <h3 class="counter" data-target="5">5</h3>
+          <p data-de="Jahre Erfahrung" data-en="Years of experience">Jahre Erfahrung</p>
+        </div>
+        <div>
+          <h3 class="counter" data-target="100">100</h3>
+          <p data-de="% Fokus auf Qualität" data-en="% focus on quality">% Fokus auf Qualität</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Leistungen" data-en="Services">Leistungen</span>
+          <h2 data-de="Digitale Lösungen für moderne Unternehmen" data-en="Digital solutions for modern businesses">
+            Digitale Lösungen für moderne Unternehmen
+          </h2>
+        </div>
+
+        <div class="services">
+          <article class="card">
+            <svg class="icon-anim" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="40"></circle>
+            </svg>
+            <h3 data-de="Webentwicklung" data-en="Web Development">Webentwicklung</h3>
+            <p
+              data-de="Professionelle Websites, Landing Pages und digitale Markenauftritte mit Fokus auf Geschwindigkeit, UX und Conversion."
+              data-en="Professional websites, landing pages, and digital brand presences focused on speed, UX, and conversion."
+            >
+              Professionelle Websites, Landing Pages und digitale Markenauftritte mit Fokus auf Geschwindigkeit, UX und Conversion.
+            </p>
+          </article>
+
+          <article class="card">
+            <svg class="icon-anim" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="40"></circle>
+            </svg>
+            <h3 data-de="Software" data-en="Software">Software</h3>
+            <p
+              data-de="Interne Tools und individuelle Webanwendungen, die Prozesse digitalisieren und den Arbeitsalltag erleichtern."
+              data-en="Internal tools and custom web applications that digitize processes and simplify daily work."
+            >
+              Interne Tools und individuelle Webanwendungen, die Prozesse digitalisieren und den Arbeitsalltag erleichtern.
+            </p>
+          </article>
+
+          <article class="card">
+            <svg class="icon-anim" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="40"></circle>
+            </svg>
+            <h3 data-de="Automatisierung" data-en="Automation">Automatisierung</h3>
+            <p
+              data-de="Smarte Automatisierung für wiederkehrende Aufgaben, Datentransfers und interne Abläufe mit weniger manuellem Aufwand."
+              data-en="Smart automation for recurring tasks, data transfers, and internal workflows with less manual effort."
+            >
+              Smarte Automatisierung für wiederkehrende Aufgaben, Datentransfers und interne Abläufe mit weniger manuellem Aufwand.
+            </p>
+          </article>
+
+          <article class="card">
+            <svg class="icon-anim" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="40"></circle>
+            </svg>
+            <h3 data-de="IT Beratung" data-en="IT Consulting">IT Beratung</h3>
+            <p
+              data-de="Technische Beratung mit Blick auf Struktur, Machbarkeit, Skalierbarkeit und langfristige Wartbarkeit."
+              data-en="Technical consulting focused on structure, feasibility, scalability, and long-term maintainability."
+            >
+              Technische Beratung mit Blick auf Struktur, Machbarkeit, Skalierbarkeit und langfristige Wartbarkeit.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="section-kicker" data-de="Über nimcode" data-en="About nimcode">Über nimcode</span>
+          <h2
+            data-de="Technisch stark, visuell klar und pragmatisch in der Umsetzung."
+            data-en="Technically strong, visually clear, and pragmatic in execution."
+          >
+            Technisch stark, visuell klar und pragmatisch in der Umsetzung.
+          </h2>
+          <p
+            data-de="nimcode verbindet modernes Design mit technischem Verständnis. Der Fokus liegt auf digitalen Lösungen, die nicht nur gut aussehen, sondern im Alltag funktionieren, Vertrauen schaffen und sauber weiterentwickelt werden können."
+            data-en="nimcode combines modern design with technical understanding. The focus is on digital solutions that not only look good, but also work in daily business, build trust, and can be developed cleanly over time."
+          >
+            nimcode verbindet modernes Design mit technischem Verständnis. Der Fokus liegt auf digitalen Lösungen, die nicht nur gut aussehen, sondern im Alltag funktionieren, Vertrauen schaffen und sauber weiterentwickelt werden können.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <article class="mini-card">
+            <strong data-de="Struktur zuerst" data-en="Structure first">Struktur zuerst</strong>
+            <p
+              data-de="Klare Informationsarchitektur und nachvollziehbare Nutzerführung."
+              data-en="Clear information architecture and understandable user guidance."
+            >
+              Klare Informationsarchitektur und nachvollziehbare Nutzerführung.
+            </p>
+          </article>
+
+          <article class="mini-card">
+            <strong data-de="Performance im Fokus" data-en="Performance in focus">Performance im Fokus</strong>
+            <p
+              data-de="Schnelle Ladezeiten, reduzierter Ballast und bessere User Experience."
+              data-en="Fast loading times, reduced overhead, and better user experience."
+            >
+              Schnelle Ladezeiten, reduzierter Ballast und bessere User Experience.
+            </p>
+          </article>
+
+          <article class="mini-card">
+            <strong data-de="Sauber erweiterbar" data-en="Cleanly extendable">Sauber erweiterbar</strong>
+            <p
+              data-de="Code und Struktur, die langfristig gepflegt und erweitert werden können."
+              data-en="Code and structure that can be maintained and extended long term."
+            >
+              Code und Struktur, die langfristig gepflegt und erweitert werden können.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Pakete" data-en="Packages">Pakete</span>
+          <h2 data-de="Klare Einstiegspunkte für unterschiedliche Anforderungen" data-en="Clear starting points for different needs">
+            Klare Einstiegspunkte für unterschiedliche Anforderungen
+          </h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="price" data-de="ab 590€" data-en="from €590">ab 590€</p>
+            <ul>
+              <li data-de="Onepage Website" data-en="One-page website">Onepage Website</li>
+              <li data-de="Kontaktformular" data-en="Contact form">Kontaktformular</li>
+              <li data-de="Responsive Design" data-en="Responsive design">Responsive Design</li>
+            </ul>
+            <a href="/contact/" class="btn" data-de="Anfragen" data-en="Request">Anfragen</a>
+          </article>
+
+          <article class="price-card highlight">
+            <span class="price-badge" data-de="Empfohlen" data-en="Recommended">Empfohlen</span>
+            <h3>Business</h3>
+            <p class="price" data-de="ab 1200€" data-en="from €1200">ab 1200€</p>
+            <ul>
+              <li data-de="Mehrseitige Website" data-en="Multi-page website">Mehrseitige Website</li>
+              <li data-de="SEO Struktur" data-en="SEO structure">SEO Struktur</li>
+              <li data-de="Performance Optimierung" data-en="Performance optimization">Performance Optimierung</li>
+            </ul>
+            <a href="/contact/" class="btn" data-de="Anfragen" data-en="Request">Anfragen</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Automation</h3>
+            <p class="price" data-de="individuell" data-en="custom">individuell</p>
+            <ul>
+              <li data-de="Prozessautomatisierung" data-en="Process automation">Prozessautomatisierung</li>
+              <li data-de="Integration" data-en="Integration">Integration</li>
+              <li data-de="Beratung" data-en="Consulting">Beratung</li>
+            </ul>
+            <a href="/contact/" class="btn" data-de="Anfragen" data-en="Request">Anfragen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker" data-de="Portfolio" data-en="Portfolio">Portfolio</span>
+            <h2 data-de="Ausgewählte Arbeiten" data-en="Selected work">Ausgewählte Arbeiten</h2>
+          </div>
+        </div>
+
+        <div class="slider">
+          <button class="slide portfolio-card" type="button" data-modal="Restaurant Website + QR Menü – Mobile First, schnell, klar und benutzerfreundlich umgesetzt.">
+            <span class="portfolio-label">01</span>
+            <strong data-de="Restaurant Website" data-en="Restaurant Website">Restaurant Website</strong>
+            <small data-de="QR Menü · Mobile First" data-en="QR menu · Mobile first">QR Menü · Mobile First</small>
+          </button>
+
+          <button class="slide portfolio-card" type="button" data-modal="Automation Tool – Interne Prozesse optimiert und wiederkehrende Aufgaben reduziert.">
+            <span class="portfolio-label">02</span>
+            <strong data-de="Automation Tool" data-en="Automation Tool">Automation Tool</strong>
+            <small data-de="Interne Prozesse" data-en="Internal processes">Interne Prozesse</small>
+          </button>
+
+          <button class="slide portfolio-card" type="button" data-modal="Portfolio System – Modernes Branding, klare Nutzerführung und professioneller Auftritt.">
+            <span class="portfolio-label">03</span>
+            <strong data-de="Portfolio System" data-en="Portfolio System">Portfolio System</strong>
+            <small data-de="Branding · Webdesign" data-en="Branding · Web design">Branding · Webdesign</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker" data-de="Kundenstimmen" data-en="Testimonials">Kundenstimmen</span>
+            <h2 data-de="So wird die Zusammenarbeit wahrgenommen" data-en="How the collaboration is experienced">
+              So wird die Zusammenarbeit wahrgenommen
+            </h2>
+          </div>
+
+          <div class="slider-controls">
+            <button id="testimonialPrev" class="nav-btn" type="button" aria-label="Vorherige Bewertung">←</button>
+            <button id="testimonialNext" class="nav-btn" type="button" aria-label="Nächste Bewertung">→</button>
+          </div>
+        </div>
+
+        <div class="testimonial-slider" id="testimonialSlider">
+          <article class="testimonial">
+            <p
+              data-de="„Sehr professionelle Umsetzung und klare Kommunikation vom ersten Gespräch bis zur finalen Übergabe.“"
+              data-en="“Very professional implementation and clear communication from the first conversation to the final handover.”"
+            >
+              „Sehr professionelle Umsetzung und klare Kommunikation vom ersten Gespräch bis zur finalen Übergabe.“
+            </p>
+          </article>
+
+          <article class="testimonial">
+            <p
+              data-de="„Schnell, sauber und zuverlässig. Genau die Mischung aus Technik und Klarheit, die wir gesucht haben.“"
+              data-en="“Fast, clean, and reliable. Exactly the mix of technology and clarity we were looking for.”"
+            >
+              „Schnell, sauber und zuverlässig. Genau die Mischung aus Technik und Klarheit, die wir gesucht haben.“
+            </p>
+          </article>
+
+          <article class="testimonial">
+            <p
+              data-de="„Technisch stark und gleichzeitig sehr verständlich in der Zusammenarbeit. Das hat den Unterschied gemacht.“"
+              data-en="“Technically strong and at the same time very easy to work with. That made the difference.”"
+            >
+              „Technisch stark und gleichzeitig sehr verständlich in der Zusammenarbeit. Das hat den Unterschied gemacht.“
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="section-kicker" data-de="FAQ" data-en="FAQ">FAQ</span>
+          <h2 data-de="Häufige Fragen" data-en="Frequently asked questions">Häufige Fragen</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-de="Für wen ist nimcode geeignet?" data-en="Who is nimcode for?">
+              Für wen ist nimcode geeignet?
+            </summary>
+            <p
+              data-de="Für Unternehmen, Selbstständige und Projekte, die eine moderne, professionelle und technisch saubere digitale Lösung brauchen."
+              data-en="For businesses, self-employed professionals, and projects that need a modern, professional, and technically clean digital solution."
+            >
+              Für Unternehmen, Selbstständige und Projekte, die eine moderne, professionelle und technisch saubere digitale Lösung brauchen.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Gibt es auch individuelle Lösungen?" data-en="Are custom solutions possible?">
+              Gibt es auch individuelle Lösungen?
+            </summary>
+            <p
+              data-de="Ja. Neben Einstiegspaketen realisiert nimcode auch individuelle Websites, interne Tools und Automatisierungslösungen."
+              data-en="Yes. In addition to entry packages, nimcode also delivers custom websites, internal tools, and automation solutions."
+            >
+              Ja. Neben Einstiegspaketen realisiert nimcode auch individuelle Websites, interne Tools und Automatisierungslösungen.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Wie läuft eine Zusammenarbeit ab?" data-en="How does a collaboration work?">
+              Wie läuft eine Zusammenarbeit ab?
+            </summary>
+            <p
+              data-de="In der Regel mit einem kurzen Erstgespräch, einer sauberen Struktur für Inhalte und Anforderungen und anschließend der Umsetzung mit finaler Abstimmung."
+              data-en="Usually with a short initial conversation, a clean structure for content and requirements, followed by implementation and final coordination."
+            >
+              In der Regel mit einem kurzen Erstgespräch, einer sauberen Struktur für Inhalte und Anforderungen und anschließend der Umsetzung mit finaler Abstimmung.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-strip" id="contact">
+      <div class="container contact-strip-inner">
+        <div>
+          <span class="section-kicker" data-de="Kontakt" data-en="Contact">Kontakt</span>
+          <h2 data-de="Bereit für ein digitales Projekt mit Struktur?" data-en="Ready for a digital project with structure?">
+            Bereit für ein digitales Projekt mit Struktur?
+          </h2>
+          <p
+            data-de="Lassen Sie uns kurz sprechen und prüfen, wie nimcode Ihr Vorhaben sinnvoll unterstützen kann."
+            data-en="Let’s talk briefly and see how nimcode can support your project in a meaningful way."
+          >
+            Lassen Sie uns kurz sprechen und prüfen, wie nimcode Ihr Vorhaben sinnvoll unterstützen kann.
+          </p>
+        </div>
+
+        <div class="contact-strip-actions">
+          <a href="/contact/" class="btn" data-de="Jetzt anfragen" data-en="Get in touch">Jetzt anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">nimcode</div>
+          <p
+            data-de="Web, Software und Automatisierung für moderne Unternehmen."
+            data-en="Web, software, and automation for modern businesses."
+          >
+            Web, Software und Automatisierung für moderne Unternehmen.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#services" data-de="Leistungen" data-en="Services">Leistungen</a>
+          <a href="#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+          <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
+          <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+        </div>
+
+        <div class="footer-links">
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutz</a>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© nimcode</span>
+      </div>
+    </footer>
+  </main>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" class="close" id="modalClose" aria-label="Modal schließen">×</button>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <a href="/contact/" class="floating-cta" data-de="Projekt starten" data-en="Start project">
+    Projekt starten
+  </a>
+
+  <script src="js/app.js"></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

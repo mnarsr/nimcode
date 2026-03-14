@@ -1,13 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<title>Impressum – Nimcode</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – nimcode</title>
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Impressum von nimcode.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .legal-page{
+      padding:120px 0 80px;
+      min-height:100vh;
+    }
+
+    .legal-shell{
+      max-width:860px;
+      margin:0 auto;
+    }
+
+    .legal-card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .legal-kicker{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--surface-2);
+      border:1px solid var(--border);
+      font-size:.9rem;
+    }
+
+    .legal-title{
+      margin:0 0 12px;
+      font-size:clamp(2rem, 5vw, 3rem);
+      line-height:1;
+    }
+
+    .legal-lead{
+      margin:0 0 28px;
+      color:var(--text-muted);
+      line-height:1.8;
+    }
+
+    .legal-section{
+      padding-top:24px;
+      margin-top:24px;
+      border-top:1px solid var(--border);
+    }
+
+    .legal-section h2{
+      margin:0 0 12px;
+      font-size:1.25rem;
+    }
+
+    .legal-section p{
+      margin:0;
+      color:var(--text-muted);
+      line-height:1.8;
+    }
+
+    .legal-back{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:24px;
+    }
+
+    @media (max-width: 760px){
+      .legal-page{
+        padding:100px 0 60px;
+      }
+
+      .legal-card{
+        padding:24px 18px;
+        border-radius:20px;
+      }
+    }
+  </style>
 </head>
-<body style="font-family:Arial; background:#0b1220; color:#fff; padding:40px;">
-<h1>Impressum</h1>
-<p>Diese Seite befindet sich derzeit in Arbeit.</p>
-<p>Weitere Informationen folgen in Kürze.</p>
-<a href="/">Zurück zur Startseite</a>
+<body>
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+      <div class="nav-right">
+        <a href="/" class="cta">Zurück zur Website</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container legal-shell">
+      <div class="legal-card">
+        <span class="legal-kicker">Rechtliches</span>
+        <h1 class="legal-title">Impressum</h1>
+        <p class="legal-lead">
+          Diese Seite ist aktuell als Platzhalter vorbereitet und wird vor dem finalen Launch
+          mit den vollständigen rechtlichen Angaben ergänzt.
+        </p>
+
+        <section class="legal-section">
+          <h2>Angaben gemäß § 5 TMG</h2>
+          <p>
+            nimcode<br>
+            In Arbeit<br>
+            Straße / Hausnummer<br>
+            PLZ Ort<br>
+            Deutschland
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Vertreten durch</h2>
+          <p>
+            In Arbeit
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Kontakt</h2>
+          <p>
+            E-Mail: info@nimcode.de<br>
+            Telefon: In Arbeit
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Umsatzsteuer-ID</h2>
+          <p>
+            In Arbeit
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+          <p>
+            In Arbeit
+          </p>
+        </section>
+
+        <a class="btn legal-back" href="/">← Zurück zur Startseite</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
