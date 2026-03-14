@@ -1388,19 +1388,19 @@ a:focus-visible{
 }
 
 .seniores-preview{
-  background-image:url("img/portfolio-seniores.jpg");
+  background-image:url("img/portfolio-seniores.png");
 }
 
 .elbhelfer-preview{
-  background-image:url("img/portfolio-elbhelfer.jpg");
+  background-image:url("img/portfolio-elbhelfer.png");
 }
 
 .zeidan-preview{
-  background-image:url("img/portfolio-zeidan.jpg");
+  background-image:url("img/portfolio-zeidan.png");
 }
 
 .qrmenu-preview{
-  background-image:url("img/portfolio-qrmenu.jpg");
+  background-image:url("img/portfolio-menu.png");
 }
 
 @media (max-width: 760px){
