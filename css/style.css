@@ -1388,19 +1388,19 @@ a:focus-visible{
 }
 
 .seniores-preview{
-  background-image:url("img/portfolio-seniores.png");
+  background-image:url("https://nimcode.de/img/portfolio-seniores.png");
 }
 
 .elbhelfer-preview{
-  background-image:url("img/portfolio-elbhelfer.png");
+  background-image:url("https://nimcode.de/img/portfolio-elbhelfer.png");
 }
 
 .zeidan-preview{
-  background-image:url("img/portfolio-zeidan.png");
+  background-image:url("https://nimcode.de/img/portfolio-zeidan.png");
 }
 
 .qrmenu-preview{
-  background-image:url("img/portfolio-menu.png");
+  background-image:url("https://nimcode.de/img/portfolio-menu.png");
 }
 
 @media (max-width: 760px){
