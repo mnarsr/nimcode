@@ -68,20 +68,21 @@ function loadGA(){
     ]
   }
   </script>
-  <script>
-function loadGA(){
-  var script = document.createElement('script');
-  script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF";
-  document.head.appendChild(script);
+<script>
+  window.loadGA = function () {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+    document.head.appendChild(script);
 
-  gtag('js', new Date());
-  gtag('config', 'G-BBJQE9YXKF');
-}
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-BBJQE9YXKF');
+  };
 </script>
 </head>
 <body>
@@ -794,9 +795,6 @@ function loadGA(){
   <a href="/contact/" class="floating-cta" data-de="Projekt starten" data-en="Start project">
     Projekt starten
   </a>
-
-  <script src="js/app.js"></script>
-  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
   <div id="cookieBanner" class="cookie-banner">
   <p>
     Diese Website verwendet Cookies für Analysezwecke.
@@ -805,5 +803,8 @@ function loadGA(){
   <button id="acceptCookies">Akzeptieren</button>
   <button id="declineCookies">Ablehnen</button>
 </div>
+  <script src="js/app.js"></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+<script src="/app.js" defer></script>
 </body>
 </html>
