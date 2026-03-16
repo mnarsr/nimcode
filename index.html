@@ -68,6 +68,21 @@ function loadGA(){
     ]
   }
   </script>
+  <script>
+function loadGA(){
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF";
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+
+  gtag('js', new Date());
+  gtag('config', 'G-BBJQE9YXKF');
+}
+</script>
 </head>
 <body>
   <div id="progressBar" aria-hidden="true"></div>
