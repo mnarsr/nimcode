@@ -395,3 +395,28 @@ if (portfolioSlider && portfolioPrev && portfolioNext) {
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const banner = document.getElementById("cookieBanner");
+  const accept = document.getElementById("acceptCookies");
+  const decline = document.getElementById("declineCookies");
+
+  if(localStorage.getItem("cookieConsent") === "accepted"){
+    loadGA();
+  }else{
+    banner.style.display = "flex";
+  }
+
+  accept.onclick = function(){
+    localStorage.setItem("cookieConsent","accepted");
+    loadGA();
+    banner.style.display = "none";
+  }
+
+  decline.onclick = function(){
+    localStorage.setItem("cookieConsent","declined");
+    banner.style.display = "none";
+  }
+
+});
