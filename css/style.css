@@ -1394,7 +1394,9 @@ a:focus-visible{
 .elbhelfer-preview{
   background-image:url("https://nimcode.de/img/portfolio-elbhelfer.png");
 }
-
+.mologistik-preview{
+  background-image:url("https://nimcode.de/img/portfolio-mo.png");
+}
 .zeidan-preview{
   background-image:url("https://nimcode.de/img/portfolio-zeidan.png");
 }
