@@ -1,21 +1,15 @@
-/<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-   <script>
-function loadGA(){
-  var script = document.createElement('script');
-  script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF";
-  document.head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag;
-
-  gtag('js', new Date());
-  gtag('config', 'G-BBJQE9YXKF');
-}
-</script>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow">
@@ -24,37 +18,32 @@ function loadGA(){
   <meta name="msvalidate.01" content="9C1854512252980C868C134B0EEB48AB" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="shortcut icon" href="/favicon.ico">
-  <title>nimcode – Web, Software & Automatisierung</title>
-  <meta
-    name="description"
-    content="nimcode entwickelt moderne Websites, Software und Automatisierungslösungen für Unternehmen mit Fokus auf Struktur, Performance und professionelle digitale Präsenz."
-  >
+  <title>Websites, QR-Menü & Kassen-Tools für Restaurants | nimcode</title>
+  <meta name="description" content="nimcode baut Websites, Online-Bestellung, QR-Menüs und Kassen-Tools für Restaurants und lokale Betriebe. Direkt vom Entwickler, Pakete ab 590 €.">
   <meta name="author" content="nimcode">
 
-  <meta property="og:title" content="nimcode – Web, Software & Automatisierung">
+  <meta property="og:title" content="Websites, QR-Menü & Kassen-Tools für Restaurants | nimcode">
   <meta
     property="og:description"
-    content="Moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen."
+    content="Websites, Online-Bestellung, QR-Menüs und Kassen-Tools für Restaurants und lokale Betriebe."
   >
-   <meta name="description" content="nimcode baut Websites, Online-Bestellung, QR-Menüs und Kassen-Tools für Restaurants und lokale Betriebe. Direkt vom Entwickler, Pakete ab 590 €.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nimcode.de/">
   <meta property="og:site_name" content="nimcode">
   <meta property="og:image" content="https://nimcode.de/og-image.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="nimcode – Web, Software & Automatisierung">
+  <meta name="twitter:title" content="Websites, QR-Menü & Kassen-Tools für Restaurants | nimcode">
   <meta
     name="twitter:description"
-    content="Moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen."
+    content="Websites, Online-Bestellung, QR-Menüs und Kassen-Tools für Restaurants und lokale Betriebe."
   >
   <meta name="twitter:image" content="https://nimcode.de/og-image.jpg">
 
   <link rel="canonical" href="https://nimcode.de/">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="preload" href="css/style.css" as="style">
-  <link rel="preload" href="js/app.js" as="script">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="/js/app.js" as="script">
+  <link rel="stylesheet" href="/css/style.css">
 
   <script type="application/ld+json">
 {
@@ -361,13 +350,13 @@ function loadGA(){
   </div>
 </section>
 
-     <section class="section" id="restaurants">
+    <section class="section" id="restaurants">
   <div class="container">
     <div class="section-intro">
       <span class="section-kicker" data-de="Für Restaurants" data-en="For restaurants">Für Restaurants</span>
       <h2 data-de="Mehr Direktbestellungen, weniger Provision" data-en="More direct orders, less commission">Mehr Direktbestellungen, weniger Provision</h2>
     </div>
-    <div class="services">
+    <div class="services services-3">
       <article class="card service-card">
         <h3 data-de="Website & Online-Bestellung" data-en="Website & online ordering">Website & Online-Bestellung</h3>
         <p data-de="Ihre eigene Bestellseite mit WooCommerce: Gäste bestellen direkt bei Ihnen, ohne Plattform-Provision." data-en="Your own ordering site with WooCommerce: guests order directly from you, without platform commission.">Ihre eigene Bestellseite mit WooCommerce: Gäste bestellen direkt bei Ihnen, ohne Plattform-Provision.</p>
@@ -381,7 +370,7 @@ function loadGA(){
         <p data-de="Kassen-App für Website-Bestellungen: Alarm bei neuen Bestellungen, Bon-Druck auf dem Thermodrucker, Touch-Bedienung." data-en="Cashier app for website orders: alarm for new orders, receipt printing on thermal printers, touch operation.">Kassen-App für Website-Bestellungen: Alarm bei neuen Bestellungen, Bon-Druck auf dem Thermodrucker, Touch-Bedienung.</p>
       </article>
     </div>
-    <p style="margin-top:24px">
+    <p class="section-cta">
       <a href="/contact/" class="btn" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
     </p>
   </div>
@@ -482,8 +471,9 @@ function loadGA(){
             </ul>
             <a href="/contact/" class="btn" data-de="Anfragen" data-en="Request">Anfragen</a>
           </article>
-           <p style="margin-top:24px;opacity:.8" data-de="Alle Preise zzgl. MwSt. Wartung & Hosting auf Wunsch ab 29 €/Monat." data-en="All prices excl. VAT. Maintenance & hosting optional from €29/month.">Alle Preise zzgl. MwSt. Wartung & Hosting auf Wunsch ab 29 €/Monat.</p>
         </div>
+
+        <p class="price-note" data-de="Alle Preise zzgl. MwSt. Wartung & Hosting auf Wunsch ab 29 €/Monat." data-en="All prices excl. VAT. Maintenance & hosting optional from €29/month.">Alle Preise zzgl. MwSt. Wartung & Hosting auf Wunsch ab 29 €/Monat.</p>
       </div>
     </section>
 
@@ -605,10 +595,10 @@ function loadGA(){
           <strong>MO-Logistik</strong>
 
           <p
-            data-de="Moderner Webauftritt für einen lokalen Servicebetrieb mit klarer Leistungsdarstellung und direkter Kontaktmöglichkeit."
-            data-en="Modern website for a local service business with clear service presentation and direct contact options."
+            data-de="Webauftritt für einen Logistikdienstleister mit klarer Leistungsübersicht und direkter Anfrage."
+            data-en="Website for a logistics provider with a clear service overview and direct inquiry."
           >
-            Moderner Webauftritt für einen lokalen Servicebetrieb mit klarer Leistungsdarstellung und direkter Kontaktmöglichkeit.
+            Webauftritt für einen Logistikdienstleister mit klarer Leistungsübersicht und direkter Anfrage.
           </p>
 
           <div class="portfolio-tags">
@@ -773,6 +763,7 @@ function loadGA(){
         <div class="footer-links">
           <a href="#services" data-de="Leistungen" data-en="Services">Leistungen</a>
           <a href="#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+          <a href="#restaurants" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
           <a href="#faq" data-de="FAQ" data-en="FAQ">FAQ</a>
           <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
         </div>
@@ -780,6 +771,7 @@ function loadGA(){
         <div class="footer-links">
           <a href="/impressum.html">Impressum</a>
           <a href="/datenschutz.html">Datenschutz</a>
+          <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
         </div>
 
         <div class="footer-links">
@@ -794,25 +786,20 @@ function loadGA(){
     </footer>
   </main>
 
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content">
-      <button type="button" class="close" id="modalClose" aria-label="Modal schließen">×</button>
-      <p id="modalText"></p>
-    </div>
-  </div>
-
   <a href="/contact/" class="floating-cta" data-de="Projekt starten" data-en="Start project">
     Projekt starten
   </a>
-  <div id="cookieBanner" class="cookie-banner">
-  <p>
-    Diese Website verwendet Cookies für Analysezwecke.
-    <a href="/datenschutz.html">Mehr erfahren</a>
-  </p>
-  <button id="acceptCookies">Akzeptieren</button>
-  <button id="declineCookies">Ablehnen</button>
-</div>
-  <script src="js/app.js"></script>
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+  <script src="/js/app.js" defer></script>
   <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>
