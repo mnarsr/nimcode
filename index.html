@@ -36,6 +36,7 @@ function loadGA(){
     property="og:description"
     content="Moderne Websites, interne Tools und Automatisierungslösungen für Unternehmen."
   >
+   <meta name="description" content="nimcode baut Websites, Online-Bestellung, QR-Menüs und Kassen-Tools für Restaurants und lokale Betriebe. Direkt vom Entwickler, Pakete ab 590 €.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nimcode.de/">
   <meta property="og:site_name" content="nimcode">
@@ -56,18 +57,20 @@ function loadGA(){
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"nimcode",
-    "url":"https://nimcode.de/",
-    "logo":"https://nimcode.de/logo.png",
-    "description":"Web-, Software- und Automatisierungslösungen für moderne Unternehmen.",
-    "sameAs":[
-      "https://www.linkedin.com/",
-      "https://www.xing.com/"
-    ]
-  }
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"nimcode",
+  "url":"https://nimcode.de/",
+  "logo":"https://nimcode.de/logo.png",
+  "description":"Websites, QR-Menüs, Kassen-Tools und Automatisierung für Restaurants und lokale Betriebe.",
+  "areaServed":"DE",
+  "founder":{"@type":"Person","name":"Manar Sras"},
+  "sameAs":[
+    "https://www.linkedin.com/in/manar-sras/",
+    "https://www.xing.com/profile/Manar_Sras/"
+  ]
+}
   </script>
 <script>
   window.loadGA = function () {
@@ -115,6 +118,7 @@ function loadGA(){
           <a href="#about" class="nav-link" data-de="Über uns" data-en="About">Über uns</a>
           <a href="#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
           <a href="#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+          <a href="#restaurants" class="nav-link" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
           <a href="#faq" class="nav-link" data-de="FAQ" data-en="FAQ">FAQ</a>
           <a href="#contact" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a>
 
@@ -357,6 +361,32 @@ function loadGA(){
   </div>
 </section>
 
+     <section class="section" id="restaurants">
+  <div class="container">
+    <div class="section-intro">
+      <span class="section-kicker" data-de="Für Restaurants" data-en="For restaurants">Für Restaurants</span>
+      <h2 data-de="Mehr Direktbestellungen, weniger Provision" data-en="More direct orders, less commission">Mehr Direktbestellungen, weniger Provision</h2>
+    </div>
+    <div class="services">
+      <article class="card service-card">
+        <h3 data-de="Website & Online-Bestellung" data-en="Website & online ordering">Website & Online-Bestellung</h3>
+        <p data-de="Ihre eigene Bestellseite mit WooCommerce: Gäste bestellen direkt bei Ihnen, ohne Plattform-Provision." data-en="Your own ordering site with WooCommerce: guests order directly from you, without platform commission.">Ihre eigene Bestellseite mit WooCommerce: Gäste bestellen direkt bei Ihnen, ohne Plattform-Provision.</p>
+      </article>
+      <article class="card service-card">
+        <h3 data-de="QR-Menü" data-en="QR menu">QR-Menü</h3>
+        <p data-de="Zweisprachige Speisekarte per QR-Code, schnell auf dem Handy, mit direktem Anruf oder WhatsApp." data-en="Bilingual menu via QR code, fast on mobile, with direct call or WhatsApp.">Zweisprachige Speisekarte per QR-Code, schnell auf dem Handy, mit direktem Anruf oder WhatsApp.</p>
+      </article>
+      <article class="card service-card">
+        <h3>Nimcode-KDS</h3>
+        <p data-de="Kassen-App für Website-Bestellungen: Alarm bei neuen Bestellungen, Bon-Druck auf dem Thermodrucker, Touch-Bedienung." data-en="Cashier app for website orders: alarm for new orders, receipt printing on thermal printers, touch operation.">Kassen-App für Website-Bestellungen: Alarm bei neuen Bestellungen, Bon-Druck auf dem Thermodrucker, Touch-Bedienung.</p>
+      </article>
+    </div>
+    <p style="margin-top:24px">
+      <a href="/contact/" class="btn" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+    </p>
+  </div>
+</section>
+
     <section class="section" id="about">
       <div class="container about-grid">
         <div class="about-copy">
@@ -452,6 +482,7 @@ function loadGA(){
             </ul>
             <a href="/contact/" class="btn" data-de="Anfragen" data-en="Request">Anfragen</a>
           </article>
+           <p style="margin-top:24px;opacity:.8" data-de="Alle Preise zzgl. MwSt. Wartung & Hosting auf Wunsch ab 29 €/Monat." data-en="All prices excl. VAT. Maintenance & hosting optional from €29/month.">Alle Preise zzgl. MwSt. Wartung & Hosting auf Wunsch ab 29 €/Monat.</p>
         </div>
       </div>
     </section>
@@ -603,7 +634,7 @@ function loadGA(){
         </div>
 
         <div class="portfolio-content">
-          <span class="portfolio-label">03</span>
+          <span class="portfolio-label">04</span>
 
           <strong>Zeidan AB</strong>
 
@@ -637,7 +668,7 @@ function loadGA(){
         </div>
 
         <div class="portfolio-content">
-          <span class="portfolio-label">04</span>
+          <span class="portfolio-label">05</span>
 
           <strong>QR Menu System</strong>
 
@@ -659,62 +690,6 @@ function loadGA(){
   </div>
 </section>
 
-    <section class="section" id="testimonials">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="section-kicker" data-de="Stimmen" data-en="Testimonials">Stimmen</span>
-        <h2 data-de="Was Kunden an der Zusammenarbeit schätzen" data-en="What clients value about working together">
-          Was Kunden an der Zusammenarbeit schätzen
-        </h2>
-      </div>
-    </div>
-
-    <div class="testimonial-slider" id="testimonialSlider">
-      <article class="testimonial">
-        <p
-          data-de="„Die Zusammenarbeit war unkompliziert, schnell und sehr strukturiert. Wünsche wurden sauber umgesetzt und die Seite wirkt deutlich professioneller als vorher.“"
-          data-en="“The collaboration was straightforward, fast, and very structured. Requests were implemented cleanly and the website looks much more professional than before.”"
-        >
-          „Die Zusammenarbeit war unkompliziert, schnell und sehr strukturiert. Wünsche wurden sauber umgesetzt und die Seite wirkt deutlich professioneller als vorher.“
-        </p>
-
-        <div class="testimonial-meta">
-          <strong>Projektkunde</strong>
-          <span data-de="Lokales Unternehmen" data-en="Local business">Lokales Unternehmen</span>
-        </div>
-      </article>
-
-      <article class="testimonial">
-        <p
-          data-de="„Besonders stark war der klare Aufbau und das technische Verständnis. Nicht nur Design, sondern auch die praktische Nutzbarkeit wurde mitgedacht.“"
-          data-en="“What stood out most was the clear structure and technical understanding. It was not just about design, but also about practical usability.”"
-        >
-          „Besonders stark war der klare Aufbau und das technische Verständnis. Nicht nur Design, sondern auch die praktische Nutzbarkeit wurde mitgedacht.“
-        </p>
-
-        <div class="testimonial-meta">
-          <strong>Business Client</strong>
-          <span data-de="Webprojekt" data-en="Web project">Webprojekt</span>
-        </div>
-      </article>
-
-      <article class="testimonial">
-        <p
-          data-de="„Schnelle Reaktion, moderne Umsetzung und ein professioneller Gesamteindruck. Genau das, was wir für unseren digitalen Auftritt gebraucht haben.“"
-          data-en="“Fast response, modern execution, and a professional overall impression. Exactly what we needed for our digital presence.”"
-        >
-          „Schnelle Reaktion, moderne Umsetzung und ein professioneller Gesamteindruck. Genau das, was wir für unseren digitalen Auftritt gebraucht haben.“
-        </p>
-
-        <div class="testimonial-meta">
-          <strong>Client Project</strong>
-          <span data-de="Digitale Präsenz" data-en="Digital presence">Digitale Präsenz</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
     <section class="section faq" id="faq">
       <div class="container faq-grid">
         <div>
