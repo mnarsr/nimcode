@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Online-Bestellsystem & Kassen-App für Restaurants | nimcode</title>
+  <meta name="description" content="Eigenes Bestellsystem für Ihr Restaurant: Online-Bestellung ohne Plattform-Provision, Bestellungen automatisch auf dem Kassen-PC mit Alarm und Bon-Druck. Nimcode Order + Nimcode-KDS.">
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="Online-Bestellsystem & Kassen-App für Restaurants | nimcode">
+  <meta property="og:description" content="Online-Bestellung ohne Plattform-Provision, mit Alarm und Bon-Druck in der Küche.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nimcode.de/restaurants/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nimcode.de/restaurants/">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Nimcode Order & Nimcode-KDS",
+    "serviceType":"Online-Bestellsystem und Kassen-App für Restaurants",
+    "provider":{"@type":"ProfessionalService","name":"nimcode","url":"https://nimcode.de/"},
+    "areaServed":"DE",
+    "description":"WordPress/WooCommerce-Bestellsystem für Restaurants mit Windows-Kassen-App für Alarm und Bon-Druck."
+  }
+  </script>
+  <script>
+    window.loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-BBJQE9YXKF');
+    };
+  </script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
+  </div>
+
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+      <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+        <a href="/#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+        <a href="/#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/restaurants/" class="nav-link" data-de="Restaurants" data-en="Restaurants" aria-current="page">Restaurants</a>
+        <a href="#faq" class="nav-link" data-de="FAQ" data-en="FAQ">FAQ</a>
+
+        <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+        <a href="/contact/" class="cta" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="gradient-bg" aria-hidden="true"></div>
+      <div class="container split">
+        <div class="hero-text">
+          <span class="eyebrow" data-de="Für Restaurants" data-en="For restaurants">Für Restaurants</span>
+          <h1 data-de="Online bestellen lassen, ohne Provision. Bis zum Bon in der Küche."
+              data-en="Take online orders without commission. All the way to the receipt in your kitchen.">
+            Online bestellen lassen, ohne Provision. Bis zum Bon in der Küche.
+          </h1>
+          <p data-de="Nimcode Order ist Ihre eigene Bestellseite mit WordPress und WooCommerce. Nimcode-KDS läuft auf dem Kassen-PC, meldet jede neue Bestellung mit Alarm und druckt den Bon auf Ihrem Thermodrucker."
+             data-en="Nimcode Order is your own ordering site built on WordPress and WooCommerce. Nimcode-KDS runs on your cash register PC, sounds an alarm for every new order and prints the receipt on your thermal printer.">
+            Nimcode Order ist Ihre eigene Bestellseite mit WordPress und WooCommerce. Nimcode-KDS läuft auf dem Kassen-PC, meldet jede neue Bestellung mit Alarm und druckt den Bon auf Ihrem Thermodrucker.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact/" class="btn" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+            <a href="#ablauf" class="btn btn-secondary" data-de="So funktioniert's" data-en="How it works">So funktioniert's</a>
+          </div>
+          <div class="hero-points">
+            <span data-de="Eigene Bestellseite" data-en="Your own ordering site">Eigene Bestellseite</span>
+            <span data-de="Alarm & Bon-Druck" data-en="Alarm &amp; receipt printing">Alarm & Bon-Druck</span>
+            <span data-de="Persönliche Einrichtung" data-en="Personal setup">Persönliche Einrichtung</span>
+          </div>
+        </div>
+
+        <figure class="shot">
+          <img src="/img/menu.webp" width="1400" height="897" alt="Speisekarte von Nimcode Order mit Lieferung/Abholung, Kategorien und Warenkorb-Button" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="ablauf">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Ablauf" data-en="How it works">Ablauf</span>
+          <h2 data-de="Von der Bestellung bis zum Bon, ganz automatisch" data-en="From order to receipt, fully automatic">Von der Bestellung bis zum Bon, ganz automatisch</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3 data-de="Gast bestellt direkt bei Ihnen" data-en="Guest orders directly from you">Gast bestellt direkt bei Ihnen</h3>
+            <p data-de="Auf Ihrer Website wählt der Gast Gericht, Größe und Extras, dann Lieferung oder Abholung. Ohne Seitenreload, schnell auf dem Handy."
+               data-en="On your website the guest picks the dish, size and extras, then delivery or pickup. No page reloads, fast on mobile.">
+              Auf Ihrer Website wählt der Gast Gericht, Größe und Extras, dann Lieferung oder Abholung. Ohne Seitenreload, schnell auf dem Handy.
+            </p>
+          </article>
+          <article class="step">
+            <h3 data-de="Nimcode Order nimmt an" data-en="Nimcode Order receives it">Nimcode Order nimmt an</h3>
+            <p data-de="Die Bestellung landet in WooCommerce, mit allen Optionen, Kommentaren und der Wunschzeit. Im Admin sehen Sie Umsatz und Top-Gerichte."
+               data-en="The order lands in WooCommerce with all options, comments and the requested time. In the admin you see revenue and top dishes.">
+              Die Bestellung landet in WooCommerce, mit allen Optionen, Kommentaren und der Wunschzeit. Im Admin sehen Sie Umsatz und Top-Gerichte.
+            </p>
+          </article>
+          <article class="step">
+            <h3 data-de="Nimcode-KDS alarmiert und druckt" data-en="Nimcode-KDS alerts and prints">Nimcode-KDS alarmiert und druckt</h3>
+            <p data-de="Auf dem Kassen-PC ertönt der Alarm, die Bestellung erscheint groß auf dem Touchscreen. Ein Tipp, und der Bon kommt aus dem Drucker."
+               data-en="The alarm sounds on the cash register PC and the order appears large on the touchscreen. One tap and the receipt comes out of the printer.">
+              Auf dem Kassen-PC ertönt der Alarm, die Bestellung erscheint groß auf dem Touchscreen. Ein Tipp, und der Bon kommt aus dem Drucker.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bestellsystem">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker">Nimcode Order</span>
+          <h2 data-de="Die Bestellseite für Ihre Gäste" data-en="The ordering site for your guests">Die Bestellseite für Ihre Gäste</h2>
+        </div>
+
+        <div class="shots-3">
+          <figure class="shot">
+            <img src="/img/options.webp" width="560" height="835" loading="lazy" alt="Auswahl von Größe, Extras und Soßen für eine Pizza">
+            <figcaption data-de="Größe, Extras und Soßen, mit Aufpreis" data-en="Size, extras and sauces, with surcharge">Größe, Extras und Soßen, mit Aufpreis</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/img/cart.webp" width="494" height="890" loading="lazy" alt="Warenkorb mit gewählten Extras, Anmerkung und Lieferung/Abholung">
+            <figcaption data-de="Warenkorb mit Anmerkung pro Artikel" data-en="Cart with a note per item">Warenkorb mit Anmerkung pro Artikel</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/img/checkout.webp" width="790" height="960" loading="lazy" alt="Kurzer Checkout mit Abholadresse, Abholzeit und Barzahlung">
+            <figcaption data-de="Kurzer Checkout mit Abholzeit" data-en="Short checkout with pickup time">Kurzer Checkout mit Abholzeit</figcaption>
+          </figure>
+        </div>
+
+        <ul class="check-list">
+          <li data-de="Bedienung ohne Seitenreload: Speisekarte, Warenkorb und Optionen" data-en="No page reloads: menu, cart and options">Bedienung ohne Seitenreload: Speisekarte, Warenkorb und Optionen</li>
+          <li data-de="Flexible Optionsgruppen: Größen, Extras und Soßen mit Aufpreis, auch für jede Variante einzeln" data-en="Flexible option groups: sizes, extras and sauces with surcharge, also per variant">Flexible Optionsgruppen: Größen, Extras und Soßen mit Aufpreis, auch für jede Variante einzeln</li>
+          <li data-de="Lieferung oder Abholung, Liefergebiet und Mindestbestellwert nach Postleitzahl" data-en="Delivery or pickup, delivery area and minimum order by postcode">Lieferung oder Abholung, Liefergebiet und Mindestbestellwert nach Postleitzahl</li>
+          <li data-de="Normalpreis bei Lieferung, Angebotspreis bei Abholung (einstellbar)" data-en="Regular price for delivery, special price for pickup (configurable)">Normalpreis bei Lieferung, Angebotspreis bei Abholung (einstellbar)</li>
+          <li data-de="Kategorienleiste oben, Wunschzeit im Checkout, Öffnungszeiten und Bestellpause per Klick" data-en="Category bar on top, requested time at checkout, opening hours and order pause with one click">Kategorienleiste oben, Wunschzeit im Checkout, Öffnungszeiten und Bestellpause per Klick</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="verwaltung">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Verwaltung" data-en="Administration">Verwaltung</span>
+          <h2 data-de="Einfach einzustellen, übersichtlich im WordPress-Admin" data-en="Easy to configure, clear in the WordPress admin">Einfach einzustellen, übersichtlich im WordPress-Admin</h2>
+        </div>
+
+        <div class="split split-wide">
+          <figure class="shot">
+            <img src="/img/dashboard.webp" width="1600" height="764" loading="lazy" alt="Dashboard mit Bestellungen, Umsatz, Durchschnittswert und stärkstem Gericht">
+            <figcaption data-de="Dashboard: Umsatz, stärkstes Gericht, Bestellungen nach Uhrzeit" data-en="Dashboard: revenue, top dish, orders by hour">Dashboard: Umsatz, stärkstes Gericht, Bestellungen nach Uhrzeit</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/img/settings.webp" width="1600" height="1212" loading="lazy" alt="Einstellungen: Abholadresse, Preise für Lieferung und Abholung, Zeiten, Zahlung">
+            <figcaption data-de="Einstellungen: Adresse, Preise, Zeiten, Zahlung" data-en="Settings: address, prices, times, payment">Einstellungen: Adresse, Preise, Zeiten, Zahlung</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kassen-app">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker">Nimcode-KDS</span>
+          <h2 data-de="Die Kassen-App: nichts geht mehr unter" data-en="The cash register app: no order gets lost">Die Kassen-App: nichts geht mehr unter</h2>
+        </div>
+
+        <div class="shots-2">
+          <figure class="shot">
+            <img src="/img/kds.webp" width="1600" height="734" loading="lazy" alt="Nimcode-KDS mit Bestellkarten für Abholung und Lieferung, Buttons Fertig, Löschen, Drucken">
+            <figcaption data-de="Bestellübersicht: Abholung und Lieferung farblich getrennt" data-en="Order overview: pickup and delivery color-coded">Bestellübersicht: Abholung und Lieferung farblich getrennt</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/img/bon.webp" width="368" height="715" loading="lazy" alt="Vorschau eines Bons für den 80-mm-Thermodrucker">
+            <figcaption data-de="Bon für den Thermodrucker" data-en="Receipt for the thermal printer">Bon für den Thermodrucker</figcaption>
+          </figure>
+        </div>
+
+        <ul class="check-list">
+          <li data-de="Alarm bei jeder neuen Bestellung, mit Sound-Auswahl und „Gesehen“-Knopf pro Bestellung" data-en="Alarm for every new order, with sound choice and a “seen” button per order">Alarm bei jeder neuen Bestellung, mit Sound-Auswahl und „Gesehen“-Knopf pro Bestellung</li>
+          <li data-de="Bon-Druck auf dem 80-mm-Thermodrucker, mit Kopfzeile, Fußzeile und optionalem QR-Code für den Fahrer" data-en="Receipt printing on an 80 mm thermal printer, with header, footer and optional QR code for the driver">Bon-Druck auf dem 80-mm-Thermodrucker, mit Kopfzeile, Fußzeile und optionalem QR-Code für den Fahrer</li>
+          <li data-de="Extras, Artikelkommentare und Kundenhinweis stehen auf der Karte und auf dem Bon" data-en="Extras, item comments and customer note appear on the card and on the receipt">Extras, Artikelkommentare und Kundenhinweis stehen auf der Karte und auf dem Bon</li>
+          <li data-de="Für den Touchscreen gebaut: wischen, tippen, fertig" data-en="Built for touchscreens: swipe, tap, done">Für den Touchscreen gebaut: wischen, tippen, fertig</li>
+        </ul>
+        <p class="page-note" data-de="Die App läuft unter Windows. Screenshots zeigen Testdaten, Kundendaten sind unkenntlich gemacht." data-en="The app runs on Windows. Screenshots show test data, customer data is blurred.">Die App läuft unter Windows. Screenshots zeigen Testdaten, Kundendaten sind unkenntlich gemacht.</p>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="section-kicker" data-de="FAQ" data-en="FAQ">FAQ</span>
+          <h2 data-de="Häufige Fragen" data-en="Frequently asked questions">Häufige Fragen</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-de="Was brauche ich dafür?" data-en="What do I need?">Was brauche ich dafür?</summary>
+            <p data-de="Eine Website mit WordPress und WooCommerce (oder eine neue, die ich für Sie einrichte), einen Windows-PC an der Kasse und einen Thermodrucker, zum Beispiel einen 80-mm-Drucker per USB."
+               data-en="A website running WordPress and WooCommerce (or a new one that I set up for you), a Windows PC at the register and a thermal printer, for example an 80 mm USB printer.">
+              Eine Website mit WordPress und WooCommerce (oder eine neue, die ich für Sie einrichte), einen Windows-PC an der Kasse und einen Thermodrucker, zum Beispiel einen 80-mm-Drucker per USB.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Kann ich beides auch einzeln nutzen?" data-en="Can I use each part separately?">Kann ich beides auch einzeln nutzen?</summary>
+            <p data-de="Die Kassen-App ist für die Zusammenarbeit mit Nimcode Order gebaut. Wie sich Ihr Betrieb am besten aufstellt, klären wir im Erstgespräch."
+               data-en="The cash register app is built to work with Nimcode Order. How your business is best set up, we clarify in an initial call.">
+              Die Kassen-App ist für die Zusammenarbeit mit Nimcode Order gebaut. Wie sich Ihr Betrieb am besten aufstellt, klären wir im Erstgespräch.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Wie bezahlen die Gäste?" data-en="How do guests pay?">Wie bezahlen die Gäste?</summary>
+            <p data-de="Barzahlung bei Lieferung oder Abholung ist immer möglich. Kartenzahlung vor Ort lässt sich in den Einstellungen anbieten."
+               data-en="Cash on delivery or pickup is always possible. Card payment on site can be enabled in the settings.">
+              Barzahlung bei Lieferung oder Abholung ist immer möglich. Kartenzahlung vor Ort lässt sich in den Einstellungen anbieten.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Was kostet das?" data-en="What does it cost?">Was kostet das?</summary>
+            <p data-de="Das hängt von Ihrer Ausgangslage ab: vorhandene Website, Umfang der Speisekarte, Einrichtung vor Ort. Schreiben Sie mir kurz, dann erhalten Sie ein festes Angebot."
+               data-en="It depends on your starting point: existing website, size of the menu, on-site setup. Send me a short message and you will get a fixed quote.">
+              Das hängt von Ihrer Ausgangslage ab: vorhandene Website, Umfang der Speisekarte, Einrichtung vor Ort. Schreiben Sie mir kurz, dann erhalten Sie ein festes Angebot.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Gibt es eine Demo?" data-en="Is there a demo?">Gibt es eine Demo?</summary>
+            <p data-de="Ja. Fragen Sie eine Demo an, dann zeige ich Ihnen die Bestellseite, den Admin und die Kassen-App live mit Testdaten."
+               data-en="Yes. Request a demo and I will show you the ordering site, the admin and the cash register app live with test data.">
+              Ja. Fragen Sie eine Demo an, dann zeige ich Ihnen die Bestellseite, den Admin und die Kassen-App live mit Testdaten.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-strip" id="contact">
+      <div class="container contact-strip-inner">
+        <div>
+          <span class="section-kicker" data-de="Kontakt" data-en="Contact">Kontakt</span>
+          <h2 data-de="Bereit für mehr Direktbestellungen?" data-en="Ready for more direct orders?">Bereit für mehr Direktbestellungen?</h2>
+          <p data-de="Lassen Sie uns kurz sprechen. Ich zeige Ihnen das System live und sage Ihnen ehrlich, ob es zu Ihrem Restaurant passt."
+             data-en="Let's talk briefly. I will show you the system live and tell you honestly whether it fits your restaurant.">
+            Lassen Sie uns kurz sprechen. Ich zeige Ihnen das System live und sage Ihnen ehrlich, ob es zu Ihrem Restaurant passt.
+          </p>
+        </div>
+        <div class="contact-strip-actions">
+          <a href="/contact/" class="btn" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">nimcode</div>
+        <p data-de="Web, Software und Automatisierung für moderne Unternehmen." data-en="Web, software, and automation for modern businesses.">Web, Software und Automatisierung für moderne Unternehmen.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/#services" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/restaurants/" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© nimcode</span>
+    </div>
+  </footer>
+
+  <a href="/contact/" class="floating-cta" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js" defer></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
