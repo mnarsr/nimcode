@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# www -> nimcode.de
+RewriteCond %{HTTP_HOST} ^www\.nimcode\.de$ [NC]
+RewriteRule ^ https://nimcode.de%{REQUEST_URI} [L,R=301]
+
+# http -> https
+RewriteCond %{HTTP_HOST} ^nimcode\.de$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://nimcode.de%{REQUEST_URI} [L,R=301]
