@@ -1668,3 +1668,23 @@ a:focus-visible{
   font-size:.92rem;
   opacity:.75;
 }
+
+/* Kassen-App-Galerie: auf Tablet/Handy untereinander statt abgeschnitten */
+@media (max-width: 980px){
+  .shots-row.shots-row-stack{
+    flex-direction:column;
+    align-items:center;
+    overflow:visible;
+    margin-inline:0;
+    padding:0;
+    max-width:100%;
+    gap:24px;
+  }
+  .shots-row.shots-row-stack .shot{
+    flex:none;
+    width:100%;
+  }
+  .shots-row.shots-row-stack .shot:nth-child(2){
+    width:min(260px,70%);
+  }
+}
