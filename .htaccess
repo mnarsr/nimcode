@@ -8,3 +8,10 @@ RewriteRule ^ https://nimcode.de%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^nimcode\.de$ [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://nimcode.de%{REQUEST_URI} [L,R=301]
+
+# Kurzes Caching für HTML/CSS/JS, damit Änderungen schnell sichtbar sind
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+</IfModule>
