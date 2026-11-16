@@ -1637,7 +1637,7 @@ a:focus-visible{
   max-width:1120px;
 }
 
-@media (max-width: 760px){
+@media (max-width: 980px){
   .shots-row,
   .shots-row.shots-row-wide{
     max-width:none;
@@ -1653,4 +1653,18 @@ a:focus-visible{
     flex:0 0 calc(var(--r) * 440px);
     scroll-snap-align:center;
   }
+}
+
+/* Logo im Dark Mode lesbar */
+.dark .logo,
+.dark .footer-logo,
+.dark .loader-logo{
+  color:#5fb8b5;
+}
+
+/* Demo-Seite */
+.demo-note{
+  margin-top:14px;
+  font-size:.92rem;
+  opacity:.75;
 }

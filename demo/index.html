@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Live-Demo: Online-Bestellsystem für Restaurants | nimcode</title>
+  <meta name="description" content="Bestellsystem live ausprobieren: Gericht wählen, Extras hinzufügen und zur Kasse gehen, in der Demo von Nimcode Order.">
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="Live-Demo: Online-Bestellsystem für Restaurants | nimcode">
+  <meta property="og:description" content="Nimcode Order live ausprobieren.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nimcode.de/demo/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nimcode.de/demo/">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script>
+    window.loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-BBJQE9YXKF');
+    };
+  </script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
+  </div>
+
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+      <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+        <a href="/#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+        <a href="/#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/restaurants/" class="nav-link" data-de="Restaurants" data-en="Restaurants" aria-current="page">Restaurants</a>
+        <a href="#faq" class="nav-link" data-de="FAQ" data-en="FAQ">FAQ</a>
+
+        <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+        <a href="/contact/" class="cta" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="gradient-bg" aria-hidden="true"></div>
+      <div class="container split">
+        <div class="hero-text">
+          <span class="eyebrow">Live-Demo</span>
+          <h1 data-de="Die Bestellseite selbst ausprobieren." data-en="Try the ordering site yourself.">Die Bestellseite selbst ausprobieren.</h1>
+          <p data-de="So sehen Ihre Gäste die Bestellung: Gericht wählen, Extras dazu, in den Warenkorb und zur Kasse. Die Demo läuft mit einem erfundenen Restaurant."
+             data-en="This is what your guests see: pick a dish, add extras, go to the cart and check out. The demo runs with a fictional restaurant.">
+            So sehen Ihre Gäste die Bestellung: Gericht wählen, Extras dazu, in den Warenkorb und zur Kasse. Die Demo läuft mit einem erfundenen Restaurant.
+          </p>
+          <div class="hero-actions">
+            <a href="https://demo.nimorder.de" class="btn" target="_blank" rel="noopener" data-de="Demo öffnen" data-en="Open demo">Demo öffnen</a>
+            <a href="/restaurants/" class="btn btn-secondary" data-de="Zur Restaurant-Lösung" data-en="About the restaurant solution">Zur Restaurant-Lösung</a>
+          </div>
+          <p class="demo-note" data-de="Bitte geben Sie in der Demo nur Testdaten ein." data-en="Please enter test data only.">Bitte geben Sie in der Demo nur Testdaten ein.</p>
+        </div>
+
+        <figure class="shot">
+          <img src="/img/menu.webp" width="1400" height="897" alt="Speisekarte von Nimcode Order" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Zum Ausprobieren" data-en="Things to try">Zum Ausprobieren</span>
+          <h2 data-de="In drei Schritten durch die Bestellung" data-en="Three steps through an order">In drei Schritten durch die Bestellung</h2>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3 data-de="1. Gericht wählen" data-en="1. Pick a dish">1. Gericht wählen</h3>
+            <p data-de="Wählen Sie ein Gericht und probieren Sie Größen, Extras und Soßen aus." data-en="Choose a dish and try sizes, extras and sauces.">Wählen Sie ein Gericht und probieren Sie Größen, Extras und Soßen aus.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="2. Warenkorb" data-en="2. Cart">2. Warenkorb</h3>
+            <p data-de="Der Warenkorb aktualisiert sich ohne Seitenreload. Pro Artikel geht eine Anmerkung." data-en="The cart updates without a page reload. You can add a note per item.">Der Warenkorb aktualisiert sich ohne Seitenreload. Pro Artikel geht eine Anmerkung.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="3. Zur Kasse" data-en="3. Checkout">3. Zur Kasse</h3>
+            <p data-de="Abholung oder Lieferung wählen, Zeit angeben und die Bestellung abschicken." data-en="Choose pickup or delivery, set a time and send the order.">Abholung oder Lieferung wählen, Zeit angeben und die Bestellung abschicken.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="section-kicker">Nimcode-KDS</span>
+          <h2 data-de="Und in der Küche?" data-en="And in the kitchen?">Und in der Küche?</h2>
+          <p data-de="Die Kassen-App zeige ich Ihnen live in einem kurzen Gespräch: Alarm bei neuer Bestellung, Anzeige auf dem Touchscreen und Bon-Druck."
+             data-en="I will show you the cash register app live in a short call: alarm on a new order, touchscreen display and receipt printing.">
+            Die Kassen-App zeige ich Ihnen live in einem kurzen Gespräch: Alarm bei neuer Bestellung, Anzeige auf dem Touchscreen und Bon-Druck.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact/" class="btn" data-de="Gespräch vereinbaren" data-en="Book a call">Gespräch vereinbaren</a>
+          </div>
+        </div>
+        <figure class="shot">
+          <img src="/img/bon.webp" width="272" height="540" loading="lazy" alt="Bon aus dem Thermodrucker mit Demo-Bestellung" style="max-width:260px;margin-inline:auto">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">nimcode</div>
+        <p data-de="Web, Software und Automatisierung für moderne Unternehmen." data-en="Web, software, and automation for modern businesses.">Web, Software und Automatisierung für moderne Unternehmen.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/#services" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/restaurants/" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/">Live-Demo</a>
+        <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© nimcode</span>
+    </div>
+  </footer>
+
+  <a href="/contact/" class="floating-cta" data-de="Demo anfragen" data-en="Request a demo">Demo anfragen</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js" defer></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
