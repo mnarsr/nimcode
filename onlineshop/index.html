@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Onlineshop erstellen lassen in Hamburg & Bad Bramstedt | nimcode</title>
+  <meta name="description" content="Onlineshops für Läden, Hofläden, Bäckereien und kleine Marken in Hamburg, Bad Bramstedt und Umgebung. Eigener WooCommerce-Shop ab 990 €, ohne Plattform-Provision. Hosting und Updates auf Wunsch ab 49 €/Monat. Beratung auf Deutsch und Arabisch.">
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="Onlineshop erstellen lassen in Hamburg & Bad Bramstedt | nimcode">
+  <meta property="og:description" content="Websites für kleine Betriebe: persönlich, verständlich, aus der Region. Ab 590 €.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nimcode.de/onlineshop/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nimcode.de/onlineshop/">
+  <link rel="stylesheet" href="/css/style.css?v=20261122">
+  <link rel="stylesheet" href="/css/motion.css?v=20261121">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Onlineshop für lokale Betriebe",
+    "serviceType":"Onlineshop-Erstellung mit WooCommerce",
+    "provider":{"@type":"ProfessionalService","name":"nimcode","url":"https://nimcode.de/"},
+    "areaServed":["Hamburg","Bad Bramstedt","Schleswig-Holstein"],
+    "offers":{"@type":"Offer","name":"Shop Start","price":"990","priceCurrency":"EUR","description":"Eigener WooCommerce-Shop mit Startseite, Impressum und Datenschutz, Bezahlung sowie Abholung oder Versand. Domain nicht enthalten. Hosting und Updates auf Wunsch ab 49 €/Monat. Preis zzgl. MwSt."}
+  }
+  </script>
+  <script>
+    window.loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-BBJQE9YXKF');
+    };
+  </script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
+  </div>
+
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+      <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+        <a href="/websites/" class="nav-link" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/onlineshop/" class="nav-link" data-de="Onlineshops" data-en="Online shops" aria-current="page">Onlineshops</a>
+        <a href="/restaurants/" class="nav-link" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" class="nav-link" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+        <a href="/#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+
+        <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+        <a href="/contact/" class="cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="gradient-bg" aria-hidden="true"></div>
+      <div class="container split">
+        <div class="hero-text">
+          <span class="eyebrow" data-de="Onlineshops für lokale Betriebe" data-en="Online shops for local businesses">Onlineshops für lokale Betriebe</span>
+          <h1 data-de="Ihr eigener Onlineshop. Klein anfangen, selbst verkaufen."
+              data-en="Your own online shop. Start small, sell directly.">
+            Ihr eigener Onlineshop. Klein anfangen, selbst verkaufen.
+          </h1>
+          <p data-de="Für Läden, Hofläden, Bäckereien, Feinkost und kleine Marken in Hamburg, Bad Bramstedt und Umgebung. Ich richte Ihren Shop mit WooCommerce ein: Produkte, Warenkorb, Bezahlung, Abholung oder Versand. Ohne Provision an eine Plattform. Beratung auf Deutsch und Arabisch."
+             data-en="For shops, farm shops, bakeries, delis and small brands in Hamburg, Bad Bramstedt and the surrounding area. I set up your shop with WooCommerce: products, cart, payment, pickup or shipping. No commission to a platform. Advice in German and Arabic.">
+            Für Läden, Hofläden, Bäckereien, Feinkost und kleine Marken in Hamburg, Bad Bramstedt und Umgebung. Ich richte Ihren Shop mit WooCommerce ein: Produkte, Warenkorb, Bezahlung, Abholung oder Versand. Ohne Provision an eine Plattform. Beratung auf Deutsch und Arabisch.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact/" class="btn" data-de="Shop anfragen" data-en="Request a shop">Shop anfragen</a>
+            <a href="#demo" class="btn btn-secondary" data-de="Demo ansehen" data-en="See the demo">Demo ansehen</a>
+          </div>
+          <div class="hero-points">
+            <span data-de="Ab 990 €" data-en="From €990">Ab 990 €</span>
+            <span data-de="Keine Plattform-Provision" data-en="No platform commission">Keine Plattform-Provision</span>
+            <span data-de="Deutsch &amp; Arabisch" data-en="German &amp; Arabic">Deutsch &amp; Arabisch</span>
+          </div>
+        </div>
+
+        <div class="device-stack" aria-label="Demo-Shop auf Computer und Handy">
+          <figure class="device-desktop">
+            <img src="/img/menu.webp" width="1400" height="897" alt="Demo-Shop mit Produktkategorien und Produkten auf dem Computer" fetchpriority="high">
+          </figure>
+          <figure class="device-phone">
+            <img src="/img/cart.webp" width="494" height="890" alt="Warenkorb des Demo-Shops auf dem Handy mit Lieferung oder Abholung">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Branchen">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span data-de="Läden" data-en="Shops">Läden</span>
+          <span data-de="Hofläden" data-en="Farm shops">Hofläden</span>
+          <span data-de="Bäckereien" data-en="Bakeries">Bäckereien</span>
+          <span data-de="Feinkost" data-en="Delis">Feinkost</span>
+          <span data-de="Imbisse" data-en="Takeaways">Imbisse</span>
+          <span data-de="Restaurants" data-en="Restaurants">Restaurants</span>
+          <span data-de="Kosmetik" data-en="Cosmetics">Kosmetik</span>
+          <span data-de="Kleine Marken" data-en="Small brands">Kleine Marken</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span data-de="Läden" data-en="Shops">Läden</span>
+          <span data-de="Hofläden" data-en="Farm shops">Hofläden</span>
+          <span data-de="Bäckereien" data-en="Bakeries">Bäckereien</span>
+          <span data-de="Feinkost" data-en="Delis">Feinkost</span>
+          <span data-de="Imbisse" data-en="Takeaways">Imbisse</span>
+          <span data-de="Restaurants" data-en="Restaurants">Restaurants</span>
+          <span data-de="Kosmetik" data-en="Cosmetics">Kosmetik</span>
+          <span data-de="Kleine Marken" data-en="Small brands">Kleine Marken</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="funktionen">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Was drin ist" data-en="What's included">Was drin ist</span>
+          <h2 data-de="Alles, was ein kleiner Shop braucht" data-en="Everything a small shop needs">Alles, was ein kleiner Shop braucht</h2>
+        </div>
+
+        <div class="industry-grid">
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🛍️</span>
+            <h3 data-de="Produkte &amp; Kategorien" data-en="Products &amp; categories">Produkte &amp; Kategorien</h3>
+            <p data-de="Mit Fotos, Beschreibung und Varianten wie Größe, Farbe oder Extras. Preise inkl. MwSt. klar angezeigt." data-en="With photos, descriptions and variants such as size, colour or extras. Prices incl. VAT shown clearly.">Mit Fotos, Beschreibung und Varianten wie Größe, Farbe oder Extras. Preise inkl. MwSt. klar angezeigt.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🛒</span>
+            <h3 data-de="Warenkorb &amp; Kasse" data-en="Cart &amp; checkout">Warenkorb &amp; Kasse</h3>
+            <p data-de="Wenige Schritte bis zur Bestellung, gut bedienbar auf dem Handy." data-en="Just a few steps to order, easy to use on mobile.">Wenige Schritte bis zur Bestellung, gut bedienbar auf dem Handy.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">💳</span>
+            <h3 data-de="Bezahlung" data-en="Payment">Bezahlung</h3>
+            <p data-de="Je nach Wunsch PayPal, Karte, Überweisung oder Barzahlung bei Abholung." data-en="Depending on your needs: PayPal, card, bank transfer or cash on pickup.">Je nach Wunsch PayPal, Karte, Überweisung oder Barzahlung bei Abholung.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">📦</span>
+            <h3 data-de="Abholung oder Versand" data-en="Pickup or shipping">Abholung oder Versand</h3>
+            <p data-de="Versandkosten, Liefergebiet und Mindestbestellwert so, wie es zu Ihrem Betrieb passt." data-en="Shipping costs, delivery area and minimum order value set up to suit your business.">Versandkosten, Liefergebiet und Mindestbestellwert so, wie es zu Ihrem Betrieb passt.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🔔</span>
+            <h3 data-de="Bestellungen im Blick" data-en="Orders at a glance">Bestellungen im Blick</h3>
+            <p data-de="E-Mail bei jeder Bestellung und eine Übersicht, die Sie ohne Technikwissen bedienen." data-en="An email for every order and an overview you can use without technical knowledge.">E-Mail bei jeder Bestellung und eine Übersicht, die Sie ohne Technikwissen bedienen.</p>
+          </article>
+          <a class="card industry-card industry-link" href="/restaurants/">
+            <span class="industry-icon" aria-hidden="true">🍕</span>
+            <h3 data-de="Restaurants →" data-en="Restaurants →">Restaurants →</h3>
+            <p data-de="Für Lieferdienste gibt es ein eigenes Bestellsystem mit Kassen-App und Bondruck." data-en="For delivery services there is a dedicated ordering system with cashier app and receipt printing.">Für Lieferdienste gibt es ein eigenes Bestellsystem mit Kassen-App und Bondruck.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="container split split-example">
+        <figure class="shot example-shot">
+          <img src="/img/checkout.webp" width="790" height="960" loading="lazy" alt="Kasse des Demo-Shops mit Abholung, Kontaktdaten und Zahlungsart">
+          <figcaption data-de="Kasse im Demo-Shop: Abholung, Daten, Zahlung" data-en="Checkout in the demo shop: pickup, details, payment">Kasse im Demo-Shop: Abholung, Daten, Zahlung</figcaption>
+        </figure>
+
+        <div>
+          <span class="section-kicker" data-de="Demo" data-en="Demo">Demo</span>
+          <h2 data-de="Selbst ausprobieren" data-en="Try it yourself">Selbst ausprobieren</h2>
+          <p data-de="Die Demo zeigt mein Bestellsystem für Restaurants. Es läuft auf WooCommerce, genau wie ein Onlineshop. So sehen Sie, wie sich Bestellen für Ihre Kunden anfühlt."
+             data-en="The demo shows my ordering system for restaurants. It runs on WooCommerce, just like an online shop, so you can see how ordering feels for your customers.">
+            Die Demo zeigt mein Bestellsystem für Restaurants. Es läuft auf WooCommerce, genau wie ein Onlineshop. So sehen Sie, wie sich Bestellen für Ihre Kunden anfühlt.
+          </p>
+          <ul class="check-list example-facts">
+            <li data-de="Produkte mit Optionen und Aufpreisen" data-en="Products with options and surcharges">Produkte mit Optionen und Aufpreisen</li>
+            <li data-de="Warenkorb mit Lieferung oder Abholung" data-en="Cart with delivery or pickup">Warenkorb mit Lieferung oder Abholung</li>
+            <li data-de="Mindestbestellwert und Liefergebühr je Gebiet" data-en="Minimum order value and delivery fee per area">Mindestbestellwert und Liefergebühr je Gebiet</li>
+            <li data-de="Kasse in wenigen Schritten, auch auf dem Handy" data-en="Checkout in a few steps, also on mobile">Kasse in wenigen Schritten, auch auf dem Handy</li>
+          </ul>
+          <p class="section-cta hero-actions">
+            <a href="https://demo.nimorder.de" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-de="Demo öffnen ↗" data-en="Open demo ↗">Demo öffnen ↗</a>
+          </p>
+          <p class="package-note" data-de="Demo: Es werden keine echten Bestellungen ausgeführt." data-en="Demo: no real orders are placed.">Demo: Es werden keine echten Bestellungen ausgeführt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ablauf">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Ablauf" data-en="How it works">Ablauf</span>
+          <h2 data-de="In 4 Schritten zum eigenen Shop" data-en="Your own shop in 4 steps">In 4 Schritten zum eigenen Shop</h2>
+        </div>
+
+        <div class="steps steps-4">
+          <article class="step">
+            <h3 data-de="Kurzes Gespräch" data-en="Short call">Kurzes Gespräch</h3>
+            <p data-de="Was wollen Sie verkaufen, an wen und wie kommt die Ware zum Kunden? Auf Deutsch oder Arabisch." data-en="What do you want to sell, to whom, and how do goods reach the customer? In German or Arabic.">Was wollen Sie verkaufen, an wen und wie kommt die Ware zum Kunden? Auf Deutsch oder Arabisch.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="Produkte &amp; Zahlung" data-en="Products &amp; payment">Produkte &amp; Zahlung</h3>
+            <p data-de="Wir legen Kategorien, Zahlungsarten, Versand und Abholung fest." data-en="We define categories, payment methods, shipping and pickup.">Wir legen Kategorien, Zahlungsarten, Versand und Abholung fest.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="Aufbau &amp; Test" data-en="Build &amp; test">Aufbau &amp; Test</h3>
+            <p data-de="Ich baue den Shop und mache Testbestellungen, bevor echte Kunden bestellen." data-en="I build the shop and place test orders before real customers order.">Ich baue den Shop und mache Testbestellungen, bevor echte Kunden bestellen.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="Online &amp; Einweisung" data-en="Live &amp; handover">Online &amp; Einweisung</h3>
+            <p data-de="Der Shop geht live. Ich zeige Ihnen, wie Sie Produkte und Bestellungen selbst pflegen." data-en="The shop goes live. I show you how to manage products and orders yourself.">Der Shop geht live. Ich zeige Ihnen, wie Sie Produkte und Bestellungen selbst pflegen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="paket">
+      <div class="container split split-package">
+        <div>
+          <span class="section-kicker" data-de="Paket" data-en="Package">Paket</span>
+          <h2 data-de="Ein Shop, der zu Ihrer Größe passt" data-en="A shop that fits your size">Ein Shop, der zu Ihrer Größe passt</h2>
+          <p class="package-intro" data-de="Kein riesiges Shopsystem, sondern ein übersichtlicher Shop für lokale Betriebe. Brauchen Sie nur eine Visitenkarte im Netz, reicht eine einfache Website."
+             data-en="Not a huge shop system, but a clear shop for local businesses. If you only need an online business card, a simple website is enough.">Kein riesiges Shopsystem, sondern ein übersichtlicher Shop für lokale Betriebe. Brauchen Sie nur eine Visitenkarte im Netz, reicht eine einfache Website.</p>
+          <p class="section-cta hero-actions">
+            <a href="/websites/" class="btn btn-secondary" data-de="Websites ab 590 €" data-en="Websites from €590">Websites ab 590 €</a>
+          </p>
+        </div>
+
+        <article class="price-card highlight package-card">
+          <span class="price-badge" data-de="Für lokale Betriebe" data-en="For local businesses">Für lokale Betriebe</span>
+          <h3>Shop Start</h3>
+          <p class="price" data-de="ab 990 €" data-en="from €990">ab 990 €</p>
+          <ul>
+            <li data-de="Eigener WooCommerce-Shop mit Startseite, Impressum und Datenschutz" data-en="Your own WooCommerce shop with home page, legal notice and privacy policy">Eigener WooCommerce-Shop mit Startseite, Impressum und Datenschutz</li>
+            <li data-de="Kategorien und Produkte eingerichtet" data-en="Categories and products set up">Kategorien und Produkte eingerichtet</li>
+            <li data-de="Bezahlung sowie Abholung oder Versand" data-en="Payment plus pickup or shipping">Bezahlung sowie Abholung oder Versand</li>
+            <li data-de="Optimiert für Handy und Computer" data-en="Optimised for mobile and desktop">Optimiert für Handy und Computer</li>
+            <li data-de="Einweisung: Produkte und Bestellungen selbst pflegen" data-en="Handover: manage products and orders yourself">Einweisung: Produkte und Bestellungen selbst pflegen</li>
+          </ul>
+          <p class="package-note" data-de="Domain nicht enthalten. Rechtstexte für den Shop (AGB, Widerruf) über einen spezialisierten Anbieter. Hosting und Updates auf Wunsch ab 49 €/Monat. Preise zzgl. MwSt."
+             data-en="Domain not included. Legal texts for the shop (T&amp;C, withdrawal) via a specialised provider. Hosting and updates optional from €49/month. Prices excl. VAT.">Domain nicht enthalten. Rechtstexte für den Shop (AGB, Widerruf) über einen spezialisierten Anbieter. Hosting und Updates auf Wunsch ab 49 €/Monat. Preise zzgl. MwSt.</p>
+          <a href="/contact/" class="btn" data-de="Jetzt anfragen" data-en="Request now">Jetzt anfragen</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="section-kicker" data-de="FAQ" data-en="FAQ">FAQ</span>
+          <h2 data-de="Häufige Fragen" data-en="Frequently asked questions">Häufige Fragen</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-de="Zahle ich Provision pro Bestellung?" data-en="Do I pay commission per order?">Zahle ich Provision pro Bestellung?</summary>
+            <p data-de="An mich nicht und an keine Plattform. Nur die Zahlungsanbieter wie PayPal oder Stripe berechnen ihre üblichen Gebühren pro Zahlung. Barzahlung bei Abholung ist gebührenfrei."
+               data-en="Not to me and not to any platform. Only payment providers such as PayPal or Stripe charge their usual fees per payment. Cash on pickup has no fees.">
+              An mich nicht und an keine Plattform. Nur die Zahlungsanbieter wie PayPal oder Stripe berechnen ihre üblichen Gebühren pro Zahlung. Barzahlung bei Abholung ist gebührenfrei.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Wer kümmert sich um AGB und Widerrufsbelehrung?" data-en="Who takes care of T&amp;C and the withdrawal notice?">Wer kümmert sich um AGB und Widerrufsbelehrung?</summary>
+            <p data-de="Rechtstexte für Shops sollten von einem spezialisierten Anbieter kommen, der sie bei Gesetzesänderungen aktualisiert. Ich binde sie ein und richte Pflichtangaben wie Preise inkl. MwSt., Versandkosten und den Bestell-Button korrekt ein. Eine Rechtsberatung ersetzt das nicht."
+               data-en="Legal texts for shops should come from a specialised provider who updates them when the law changes. I integrate them and set up mandatory details such as prices incl. VAT, shipping costs and the order button correctly. This does not replace legal advice.">
+              Rechtstexte für Shops sollten von einem spezialisierten Anbieter kommen, der sie bei Gesetzesänderungen aktualisiert. Ich binde sie ein und richte Pflichtangaben wie Preise inkl. MwSt., Versandkosten und den Bestell-Button korrekt ein. Eine Rechtsberatung ersetzt das nicht.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Was ist mit Hosting und Updates?" data-en="What about hosting and updates?">Was ist mit Hosting und Updates?</summary>
+            <p data-de="Gibt es auf Wunsch ab 49 €/Monat. Ein Shop braucht regelmäßige Updates von WordPress, WooCommerce und den Erweiterungen, damit er sicher läuft und Zahlungen funktionieren. Darum kümmere ich mich."
+               data-en="Available from €49/month. A shop needs regular updates to WordPress, WooCommerce and its extensions so that it runs securely and payments keep working. I take care of that.">
+              Gibt es auf Wunsch ab 49 €/Monat. Ein Shop braucht regelmäßige Updates von WordPress, WooCommerce und den Erweiterungen, damit er sicher läuft und Zahlungen funktionieren. Darum kümmere ich mich.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Kann ich Produkte selbst ändern?" data-en="Can I change products myself?">Kann ich Produkte selbst ändern?</summary>
+            <p data-de="Ja. Nach der Einweisung können Sie Preise, Fotos und neue Produkte selbst pflegen. Wenn Sie das lieber abgeben, übernehme ich es."
+               data-en="Yes. After the handover you can update prices, photos and new products yourself. If you prefer to hand it over, I take care of it.">
+              Ja. Nach der Einweisung können Sie Preise, Fotos und neue Produkte selbst pflegen. Wenn Sie das lieber abgeben, übernehme ich es.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Wem gehört die Domain?" data-en="Who owns the domain?">Wem gehört die Domain?</summary>
+            <p data-de="Die Domain ist nicht im Paket enthalten. Am besten läuft sie auf Ihren Namen, damit sie Ihnen gehört. Bei der Einrichtung helfe ich gern."
+               data-en="The domain is not included in the package. Ideally it is registered in your name so that it belongs to you. I am happy to help with the setup.">
+              Die Domain ist nicht im Paket enthalten. Am besten läuft sie auf Ihren Namen, damit sie Ihnen gehört. Bei der Einrichtung helfe ich gern.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Geht die Beratung auch auf Arabisch?" data-en="Is advice available in Arabic?">Geht die Beratung auch auf Arabisch?</summary>
+            <p data-de="Ja. Beratung gibt es auf Deutsch und Arabisch, der Shop selbst ist auf Deutsch, damit Ihre Kunden in Deutschland alles verstehen."
+               data-en="Yes. Advice is available in German and Arabic, the shop itself is in German so your customers in Germany understand everything.">
+              Ja. Beratung gibt es auf Deutsch und Arabisch, der Shop selbst ist auf Deutsch, damit Ihre Kunden in Deutschland alles verstehen.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-strip" id="contact">
+      <div class="container contact-strip-inner">
+        <div>
+          <span class="section-kicker" data-de="Kontakt" data-en="Contact">Kontakt</span>
+          <h2 data-de="Lust auf Ihren eigenen Shop?" data-en="Ready for your own shop?">Lust auf Ihren eigenen Shop?</h2>
+          <p data-de="Schreiben Sie mir kurz, was Sie verkaufen möchten. Ich melde mich mit einem klaren Vorschlag."
+             data-en="Send me a short message about what you want to sell. I will get back to you with a clear proposal.">
+            Schreiben Sie mir kurz, was Sie verkaufen möchten. Ich melde mich mit einem klaren Vorschlag.
+          </p>
+        </div>
+        <div class="contact-strip-actions">
+          <a href="/contact/" class="btn" data-de="Shop anfragen" data-en="Request a shop">Shop anfragen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">nimcode</div>
+        <p data-de="Web, Software und Automatisierung für moderne Unternehmen." data-en="Web, software, and automation for modern businesses.">Web, Software und Automatisierung für moderne Unternehmen.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/websites/" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/onlineshop/" data-de="Onlineshops" data-en="Online shops">Onlineshops</a>
+        <a href="/restaurants/" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© nimcode</span>
+    </div>
+  </footer>
+
+  <a href="/contact/" class="floating-cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js?v=20261122" defer></script>
+  <script src="/js/motion.js?v=20261121" defer></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
