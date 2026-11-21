@@ -1,0 +1,278 @@
+/* =====================================================================
+   nimcode – Motion
+   Dezente Animationen für alle Hauptseiten.
+   Alles hier greift nur, wenn js/motion.js die Klasse "motion" auf <html>
+   setzt. Bei "prefers-reduced-motion" oder ohne JavaScript bleibt die
+   Seite ruhig und vollständig sichtbar.
+   ===================================================================== */
+
+:root{
+  --mint:#8fd6c9;
+  --mint-rgb:143,214,201;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+}
+
+/* ---------- Hero: Netz-Hintergrund + Aurora ---------- */
+
+.net-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 1.2s ease;
+  -webkit-mask-image:linear-gradient(to bottom, #000 55%, transparent 100%);
+          mask-image:linear-gradient(to bottom, #000 55%, transparent 100%);
+}
+
+.net-bg.is-on{ opacity:1; }
+
+.motion .hero,
+.motion .page-hero{
+  isolation:isolate;
+  overflow:hidden;
+}
+
+.motion .hero::after,
+.motion .page-hero::after{
+  content:"";
+  position:absolute;
+  right:-12%;
+  top:8%;
+  width:min(620px, 70vw);
+  height:min(620px, 70vw);
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(var(--mint-rgb),.22), transparent 65%);
+  filter:blur(10px);
+  z-index:-1;
+  pointer-events:none;
+  animation:aurora-drift 18s ease-in-out infinite alternate;
+}
+
+/* ---------- Hero: Einstieg Schritt für Schritt ---------- */
+
+.motion .hero-text > *{
+  animation:hero-in .9s var(--ease-out) both;
+  animation-delay:calc(var(--i, 0) * 110ms + 150ms);
+}
+
+.motion .hero-shots .shot,
+.motion .page-hero .shot{
+  animation:hero-in 1s var(--ease-out) both .45s;
+}
+
+.motion .hero-shots .hero-shot-main,
+.motion .device-stack .device-phone{
+  animation:hero-in 1s var(--ease-out) both .45s, float-slow 7s ease-in-out 1.5s infinite;
+}
+
+.motion .hero-shots .hero-shot-second,
+.motion .device-stack .device-desktop{
+  animation:hero-in 1s var(--ease-out) both .65s, float-slower 9s ease-in-out 1.7s infinite;
+}
+
+/* ---------- Gestaffeltes Einblenden in Abschnitten ---------- */
+
+.motion .stagger > *{
+  opacity:0;
+  transform:translateY(26px);
+}
+
+.motion .section.show .stagger > *{
+  animation:fade-up .75s var(--ease-out) both;
+  animation-delay:calc(var(--i, 0) * 90ms);
+}
+
+/* ---------- Kicker mit Puls-Punkt ---------- */
+
+.motion .section-kicker::before,
+.motion .eyebrow::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--mint);
+  box-shadow:0 0 0 0 rgba(var(--mint-rgb),.7);
+  animation:dot-ping 2.4s ease-out infinite;
+}
+
+/* ---------- Haupt-Buttons: weiches Leuchten ---------- */
+
+.motion .hero .btn:not(.btn-secondary),
+.motion .page-hero .btn:not(.btn-secondary),
+.motion .contact-strip .btn,
+.motion .floating-cta{
+  animation:pulse-glow 3.2s ease-in-out infinite;
+}
+
+.motion .btn,
+.motion .btn-secondary,
+.motion .cta{
+  transition:transform .25s var(--ease-out), box-shadow .25s ease, background-color .25s ease;
+}
+
+/* ---------- Karten: Lichtkegel folgt der Maus ---------- */
+
+.motion .spot{
+  position:relative;
+  isolation:isolate;
+}
+
+.motion .spot::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--mint-rgb),.20), transparent 45%);
+  opacity:0;
+  transition:opacity .35s ease;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.motion .spot:hover::after{ opacity:1; }
+
+.motion .card,
+.motion .price-card,
+.motion .mini-card,
+.motion .step{
+  transition:transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease;
+}
+
+.motion .card:hover,
+.motion .price-card:hover,
+.motion .mini-card:hover,
+.motion .step:hover{
+  border-color:rgba(var(--mint-rgb),.55);
+}
+
+/* ---------- Screenshots: leichter Zoom beim Hover ---------- */
+
+.motion .shot img{
+  transition:transform .6s var(--ease-out);
+}
+
+.motion .shot:hover img{
+  transform:scale(1.03);
+}
+
+/* ---------- Laufband (Branchen) ---------- */
+
+.marquee{
+  position:relative;
+  overflow:hidden;
+  padding:18px 0;
+  border-block:1px solid var(--border);
+  background:var(--surface);
+  -webkit-mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+          mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track{
+  display:flex;
+  width:max-content;
+  gap:0;
+}
+
+.marquee-group{
+  display:flex;
+  align-items:center;
+  gap:42px;
+  padding-right:42px;
+  flex-shrink:0;
+}
+
+.marquee-group span{
+  display:inline-flex;
+  align-items:center;
+  gap:42px;
+  font-weight:600;
+  font-size:1.02rem;
+  white-space:nowrap;
+  color:var(--text);
+}
+
+.marquee-group span::after{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--mint);
+}
+
+.motion .marquee-track{
+  animation:marquee 32s linear infinite;
+}
+
+.motion .marquee:hover .marquee-track{
+  animation-play-state:paused;
+}
+
+/* Ohne Motion: Laufband als ruhige, umbrechende Zeile */
+html:not(.motion) .marquee-track{
+  width:auto;
+  justify-content:center;
+}
+
+html:not(.motion) .marquee-group{
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px 28px;
+  padding:0 20px;
+}
+
+html:not(.motion) .marquee-group[aria-hidden="true"]{
+  display:none;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes hero-in{
+  from{ opacity:0; transform:translateY(28px); filter:blur(6px); }
+  to{ opacity:1; transform:none; filter:none; }
+}
+
+@keyframes fade-up{
+  from{ opacity:0; transform:translateY(26px); }
+  to{ opacity:1; transform:none; }
+}
+
+@keyframes float-slow{
+  0%, 100%{ transform:translateY(0); }
+  50%{ transform:translateY(-10px); }
+}
+
+@keyframes float-slower{
+  0%, 100%{ transform:translateY(0); }
+  50%{ transform:translateY(8px); }
+}
+
+@keyframes aurora-drift{
+  0%{ transform:translate(0, 0) scale(1); }
+  50%{ transform:translate(-8%, 10%) scale(1.12); }
+  100%{ transform:translate(-16%, -4%) scale(.95); }
+}
+
+@keyframes pulse-glow{
+  0%, 100%{ box-shadow:0 0 0 0 rgba(var(--mint-rgb),0); }
+  50%{ box-shadow:0 0 0 6px rgba(var(--mint-rgb),.18), 0 8px 26px rgba(15,61,62,.28); }
+}
+
+@keyframes dot-ping{
+  0%{ box-shadow:0 0 0 0 rgba(var(--mint-rgb),.7); }
+  70%, 100%{ box-shadow:0 0 0 8px rgba(var(--mint-rgb),0); }
+}
+
+@keyframes marquee{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+/* ---------- Sicherheitsnetz ---------- */
+
+@media (prefers-reduced-motion: reduce){
+  .net-bg{ display:none; }
+  .motion .stagger > *{ opacity:1; transform:none; }
+}

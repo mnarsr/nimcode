@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Website erstellen lassen in Hamburg & Bad Bramstedt | nimcode</title>
+  <meta name="description" content="Websites für Handwerker, Salons, Praxen, Läden und Vereine in Hamburg, Bad Bramstedt und Umgebung. Ab 590 € mit Startseite, Impressum und Datenschutz. Hosting und Updates auf Wunsch ab 29 €/Monat. Beratung auf Deutsch und Arabisch.">
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="Website erstellen lassen in Hamburg & Bad Bramstedt | nimcode">
+  <meta property="og:description" content="Websites für kleine Betriebe: persönlich, verständlich, aus der Region. Ab 590 €.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nimcode.de/websites/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nimcode.de/websites/">
+  <link rel="stylesheet" href="/css/style.css?v=20261121">
+  <link rel="stylesheet" href="/css/motion.css?v=20261121">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Website für kleine Betriebe",
+    "serviceType":"Webdesign und Website-Erstellung",
+    "provider":{"@type":"ProfessionalService","name":"nimcode","url":"https://nimcode.de/"},
+    "areaServed":["Hamburg","Bad Bramstedt","Schleswig-Holstein"],
+    "offers":{"@type":"Offer","name":"Starter","price":"590","priceCurrency":"EUR","description":"Startseite, Impressum und Datenschutz. Domain nicht enthalten. Hosting und Updates auf Wunsch ab 29 €/Monat. Preis zzgl. MwSt."}
+  }
+  </script>
+  <script>
+    window.loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-BBJQE9YXKF');
+    };
+  </script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
+  </div>
+
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+      <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+        <a href="/websites/" class="nav-link" data-de="Websites" data-en="Websites" aria-current="page">Websites</a>
+        <a href="/restaurants/" class="nav-link" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" class="nav-link" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+        <a href="/#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+
+        <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+        <a href="/contact/" class="cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="gradient-bg" aria-hidden="true"></div>
+      <div class="container split">
+        <div class="hero-text">
+          <span class="eyebrow" data-de="Für kleine Betriebe" data-en="For small businesses">Für kleine Betriebe</span>
+          <h1 data-de="Ihre Website. Persönlich, verständlich, aus der Region."
+              data-en="Your website. Personal, clear, local.">
+            Ihre Website. Persönlich, verständlich, aus der Region.
+          </h1>
+          <p data-de="Für Handwerker, Salons, Praxen, Läden und Vereine in Hamburg, Bad Bramstedt und Umgebung. Ich baue Ihre Website, erkläre alles verständlich und kümmere mich auf Wunsch auch um Hosting und Updates. Beratung auf Deutsch und Arabisch."
+             data-en="For tradespeople, salons, practices, shops and clubs in Hamburg, Bad Bramstedt and the surrounding area. I build your website, explain everything clearly and, if you like, also take care of hosting and updates. Advice in German and Arabic.">
+            Für Handwerker, Salons, Praxen, Läden und Vereine in Hamburg, Bad Bramstedt und Umgebung. Ich baue Ihre Website, erkläre alles verständlich und kümmere mich auf Wunsch auch um Hosting und Updates. Beratung auf Deutsch und Arabisch.
+          </p>
+          <div class="hero-actions">
+            <a href="/contact/" class="btn" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+            <a href="#beispiel" class="btn btn-secondary" data-de="Beispiel ansehen" data-en="See an example">Beispiel ansehen</a>
+          </div>
+          <div class="hero-points">
+            <span data-de="Ab 590 €" data-en="From €590">Ab 590 €</span>
+            <span data-de="Persönlich betreut" data-en="Personal support">Persönlich betreut</span>
+            <span data-de="Deutsch &amp; Arabisch" data-en="German &amp; Arabic">Deutsch &amp; Arabisch</span>
+          </div>
+        </div>
+
+        <div class="device-stack" aria-label="Beispielprojekt ELBHELFER auf Laptop und Handy">
+          <figure class="device-desktop">
+            <img src="/img/elbhelfer-desktop.webp" width="800" height="600" alt="Website von ELBHELFER auf dem Computer" fetchpriority="high">
+          </figure>
+          <figure class="device-phone">
+            <img src="/img/elbhelfer-mobil.webp" width="375" height="812" alt="Website von ELBHELFER auf dem Handy mit Buttons für Anruf, WhatsApp und E-Mail">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Branchen">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span data-de="Handwerker" data-en="Tradespeople">Handwerker</span>
+          <span data-de="Hausmeister" data-en="Caretakers">Hausmeister</span>
+          <span data-de="Friseure" data-en="Hair salons">Friseure</span>
+          <span data-de="Kosmetik &amp; Nails" data-en="Beauty &amp; nails">Kosmetik &amp; Nails</span>
+          <span data-de="Praxen" data-en="Practices">Praxen</span>
+          <span data-de="Läden" data-en="Shops">Läden</span>
+          <span data-de="Vereine" data-en="Clubs">Vereine</span>
+          <span data-de="Restaurants" data-en="Restaurants">Restaurants</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span data-de="Handwerker" data-en="Tradespeople">Handwerker</span>
+          <span data-de="Hausmeister" data-en="Caretakers">Hausmeister</span>
+          <span data-de="Friseure" data-en="Hair salons">Friseure</span>
+          <span data-de="Kosmetik &amp; Nails" data-en="Beauty &amp; nails">Kosmetik &amp; Nails</span>
+          <span data-de="Praxen" data-en="Practices">Praxen</span>
+          <span data-de="Läden" data-en="Shops">Läden</span>
+          <span data-de="Vereine" data-en="Clubs">Vereine</span>
+          <span data-de="Restaurants" data-en="Restaurants">Restaurants</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="fuer-wen">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Für wen" data-en="Who it's for">Für wen</span>
+          <h2 data-de="Was Ihre Kunden auf Ihrer Website suchen" data-en="What your customers look for on your website">Was Ihre Kunden auf Ihrer Website suchen</h2>
+        </div>
+
+        <div class="industry-grid">
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🔧</span>
+            <h3 data-de="Handwerk &amp; Hausmeister" data-en="Trades &amp; caretakers">Handwerk &amp; Hausmeister</h3>
+            <p data-de="Leistungen, Einsatzgebiet und eine Anfrage per Anruf oder WhatsApp, auch wenn Sie gerade auf der Baustelle sind." data-en="Services, service area and an enquiry by phone or WhatsApp, even when you are on site.">Leistungen, Einsatzgebiet und eine Anfrage per Anruf oder WhatsApp, auch wenn Sie gerade auf der Baustelle sind.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">✂️</span>
+            <h3 data-de="Friseure &amp; Kosmetik" data-en="Hair &amp; beauty">Friseure &amp; Kosmetik</h3>
+            <p data-de="Leistungen, Preise, Öffnungszeiten und der schnellste Weg zum Termin." data-en="Services, prices, opening hours and the fastest way to an appointment.">Leistungen, Preise, Öffnungszeiten und der schnellste Weg zum Termin.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🩺</span>
+            <h3 data-de="Praxen" data-en="Practices">Praxen</h3>
+            <p data-de="Sprechzeiten, Leistungen und Anfahrt, gut lesbar auf dem Handy." data-en="Consultation hours, services and directions, easy to read on mobile.">Sprechzeiten, Leistungen und Anfahrt, gut lesbar auf dem Handy.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🛍️</span>
+            <h3 data-de="Läden" data-en="Shops">Läden</h3>
+            <p data-de="Sortiment, Öffnungszeiten und Adresse mit Karte, damit Kunden den Weg finden." data-en="Range, opening hours and address with a map so customers find you.">Sortiment, Öffnungszeiten und Adresse mit Karte, damit Kunden den Weg finden.</p>
+          </article>
+          <article class="card industry-card">
+            <span class="industry-icon" aria-hidden="true">🏃</span>
+            <h3 data-de="Vereine" data-en="Clubs">Vereine</h3>
+            <p data-de="Termine, Ansprechpartner und „Mitglied werden“ an einer Stelle." data-en="Dates, contacts and “become a member” in one place.">Termine, Ansprechpartner und „Mitglied werden“ an einer Stelle.</p>
+          </article>
+          <a class="card industry-card industry-link" href="/restaurants/">
+            <span class="industry-icon" aria-hidden="true">🍕</span>
+            <h3 data-de="Restaurants →" data-en="Restaurants →">Restaurants →</h3>
+            <p data-de="Mit eigenem Bestellsystem und Kassen-App, ohne Plattform-Provision." data-en="With your own ordering system and cashier app, without platform commission.">Mit eigenem Bestellsystem und Kassen-App, ohne Plattform-Provision.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beispiel">
+      <div class="container split split-example">
+        <figure class="shot example-shot">
+          <img src="/img/elbhelfer-desktop.webp" width="800" height="600" loading="lazy" alt="Startseite von ELBHELFER mit Logo und Kontakt-Buttons">
+          <figcaption data-de="ELBHELFER, Hamburg: Hausmeister- &amp; Allround-Service" data-en="ELBHELFER, Hamburg: caretaker &amp; all-round service">ELBHELFER, Hamburg: Hausmeister- &amp; Allround-Service</figcaption>
+        </figure>
+
+        <div>
+          <span class="section-kicker" data-de="Beispiel" data-en="Example">Beispiel</span>
+          <h2 data-de="ELBHELFER: alles auf einen Blick" data-en="ELBHELFER: everything at a glance">ELBHELFER: alles auf einen Blick</h2>
+          <ul class="check-list example-facts">
+            <li data-de="Anruf, WhatsApp und E-Mail direkt oben, mit einem Tipp erreichbar" data-en="Call, WhatsApp and email right at the top, one tap away">Anruf, WhatsApp und E-Mail direkt oben, mit einem Tipp erreichbar</li>
+            <li data-de="Alle Leistungen übersichtlich, von Gebäudereinigung bis Umzug" data-en="All services at a glance, from building cleaning to moving">Alle Leistungen übersichtlich, von Gebäudereinigung bis Umzug</li>
+            <li data-de="Galerie „Einblicke in unsere Arbeit“ mit echten Fotos" data-en="Gallery “Insights into our work” with real photos">Galerie „Einblicke in unsere Arbeit“ mit echten Fotos</li>
+            <li data-de="Kontaktformular, Impressum und Datenschutz" data-en="Contact form, legal notice and privacy policy">Kontaktformular, Impressum und Datenschutz</li>
+          </ul>
+          <p class="section-cta hero-actions">
+            <a href="https://elb-helfer.de/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-de="Live ansehen ↗" data-en="View live ↗">Live ansehen ↗</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ablauf">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker" data-de="Ablauf" data-en="How it works">Ablauf</span>
+          <h2 data-de="In 4 Schritten zur eigenen Website" data-en="Your own website in 4 steps">In 4 Schritten zur eigenen Website</h2>
+        </div>
+
+        <div class="steps steps-4">
+          <article class="step">
+            <h3 data-de="Kurzes Gespräch" data-en="Short call">Kurzes Gespräch</h3>
+            <p data-de="Was brauchen Sie wirklich? Auf Deutsch oder Arabisch, am Telefon oder vor Ort." data-en="What do you really need? In German or Arabic, by phone or in person.">Was brauchen Sie wirklich? Auf Deutsch oder Arabisch, am Telefon oder vor Ort.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="Entwurf" data-en="Draft">Entwurf</h3>
+            <p data-de="Sie sehen vorher, wie Ihre Website aussehen wird, passend zu Ihrem Betrieb." data-en="You see beforehand what your website will look like, matching your business.">Sie sehen vorher, wie Ihre Website aussehen wird, passend zu Ihrem Betrieb.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="Umsetzung" data-en="Build">Umsetzung</h3>
+            <p data-de="Mit Ihren Texten und Fotos. Wenn etwas fehlt, helfe ich beim Formulieren." data-en="With your texts and photos. If something is missing, I help with the wording.">Mit Ihren Texten und Fotos. Wenn etwas fehlt, helfe ich beim Formulieren.</p>
+          </article>
+          <article class="step">
+            <h3 data-de="Online" data-en="Live">Online</h3>
+            <p data-de="Ihre Website geht live. Auf Wunsch übernehme ich danach Hosting und Updates." data-en="Your website goes live. If you like, I take care of hosting and updates afterwards.">Ihre Website geht live. Auf Wunsch übernehme ich danach Hosting und Updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="paket">
+      <div class="container split split-package">
+        <div>
+          <span class="section-kicker" data-de="Paket" data-en="Package">Paket</span>
+          <h2 data-de="Klarer Einstieg, keine Überraschungen" data-en="A clear start, no surprises">Klarer Einstieg, keine Überraschungen</h2>
+          <p class="package-intro" data-de="Für die meisten kleinen Betriebe reicht der Starter. Brauchen Sie mehr Seiten, passt das Business-Paket." data-en="For most small businesses the Starter is enough. If you need more pages, the Business package fits.">Für die meisten kleinen Betriebe reicht der Starter. Brauchen Sie mehr Seiten, passt das Business-Paket.</p>
+          <p class="section-cta hero-actions">
+            <a href="/#pricing" class="btn btn-secondary" data-de="Alle Pakete ansehen" data-en="See all packages">Alle Pakete ansehen</a>
+          </p>
+        </div>
+
+        <article class="price-card highlight package-card">
+          <span class="price-badge" data-de="Für kleine Betriebe" data-en="For small businesses">Für kleine Betriebe</span>
+          <h3>Starter</h3>
+          <p class="price" data-de="ab 590 €" data-en="from €590">ab 590 €</p>
+          <ul>
+            <li data-de="3 Seiten: Startseite, Impressum, Datenschutz" data-en="3 pages: home, legal notice, privacy policy">3 Seiten: Startseite, Impressum, Datenschutz</li>
+            <li data-de="Optimiert für Handy und Computer" data-en="Optimised for mobile and desktop">Optimiert für Handy und Computer</li>
+            <li data-de="Anruf, WhatsApp und E-Mail mit einem Tipp" data-en="Call, WhatsApp and email with one tap">Anruf, WhatsApp und E-Mail mit einem Tipp</li>
+            <li data-de="Kontaktbereich mit Formular oder direktem Kontakt" data-en="Contact section with form or direct contact">Kontaktbereich mit Formular oder direktem Kontakt</li>
+          </ul>
+          <p class="package-note" data-de="Domain nicht enthalten. Hosting und Updates auf Wunsch ab 29 €/Monat. Preise zzgl. MwSt." data-en="Domain not included. Hosting and updates optional from €29/month. Prices excl. VAT.">Domain nicht enthalten. Hosting und Updates auf Wunsch ab 29 €/Monat. Preise zzgl. MwSt.</p>
+          <a href="/contact/" class="btn" data-de="Jetzt anfragen" data-en="Request now">Jetzt anfragen</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="section-kicker" data-de="FAQ" data-en="FAQ">FAQ</span>
+          <h2 data-de="Häufige Fragen" data-en="Frequently asked questions">Häufige Fragen</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-de="Wem gehört die Domain?" data-en="Who owns the domain?">Wem gehört die Domain?</summary>
+            <p data-de="Die Domain ist nicht im Paket enthalten. Am besten läuft sie auf Ihren Namen, damit sie Ihnen gehört. Bei der Einrichtung helfe ich gern."
+               data-en="The domain is not included in the package. Ideally it is registered in your name so that it belongs to you. I am happy to help with the setup.">
+              Die Domain ist nicht im Paket enthalten. Am besten läuft sie auf Ihren Namen, damit sie Ihnen gehört. Bei der Einrichtung helfe ich gern.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Was ist mit Updates?" data-en="What about updates?">Was ist mit Updates?</summary>
+            <p data-de="Hosting und Updates gibt es auf Wunsch ab 29 €/Monat. Dann kümmere ich mich darum, dass die Seite sicher läuft, und setze Änderungen um, zum Beispiel neue Öffnungszeiten oder Leistungen."
+               data-en="Hosting and updates are available from €29/month. I then make sure the site runs securely and make changes for you, for example new opening hours or services.">
+              Hosting und Updates gibt es auf Wunsch ab 29 €/Monat. Dann kümmere ich mich darum, dass die Seite sicher läuft, und setze Änderungen um, zum Beispiel neue Öffnungszeiten oder Leistungen.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Brauche ich eigene Fotos und Texte?" data-en="Do I need my own photos and texts?">Brauche ich eigene Fotos und Texte?</summary>
+            <p data-de="Echte Fotos von Ihrem Betrieb wirken am besten. Texte schreiben wir gemeinsam, Sie müssen kein Profi sein."
+               data-en="Real photos of your business work best. We write the texts together, you don't need to be a professional.">
+              Echte Fotos von Ihrem Betrieb wirken am besten. Texte schreiben wir gemeinsam, Sie müssen kein Profi sein.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-de="Geht die Beratung auch auf Arabisch?" data-en="Is advice available in Arabic?">Geht die Beratung auch auf Arabisch?</summary>
+            <p data-de="Ja. Beratung gibt es auf Deutsch und Arabisch, die Website selbst ist auf Deutsch, damit Ihre Kunden in Deutschland alles verstehen."
+               data-en="Yes. Advice is available in German and Arabic, the website itself is in German so your customers in Germany understand everything.">
+              Ja. Beratung gibt es auf Deutsch und Arabisch, die Website selbst ist auf Deutsch, damit Ihre Kunden in Deutschland alles verstehen.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-strip" id="contact">
+      <div class="container contact-strip-inner">
+        <div>
+          <span class="section-kicker" data-de="Kontakt" data-en="Contact">Kontakt</span>
+          <h2 data-de="Lust auf Ihre eigene Website?" data-en="Ready for your own website?">Lust auf Ihre eigene Website?</h2>
+          <p data-de="Schreiben Sie mir kurz, was Ihr Betrieb macht. Ich melde mich mit einem klaren Vorschlag."
+             data-en="Send me a short message about what your business does. I will get back to you with a clear proposal.">
+            Schreiben Sie mir kurz, was Ihr Betrieb macht. Ich melde mich mit einem klaren Vorschlag.
+          </p>
+        </div>
+        <div class="contact-strip-actions">
+          <a href="/contact/" class="btn" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">nimcode</div>
+        <p data-de="Web, Software und Automatisierung für moderne Unternehmen." data-en="Web, software, and automation for modern businesses.">Web, Software und Automatisierung für moderne Unternehmen.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/websites/" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/restaurants/" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© nimcode</span>
+    </div>
+  </footer>
+
+  <a href="/contact/" class="floating-cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js?v=20261121" defer></script>
+  <script src="/js/motion.js?v=20261121" defer></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
