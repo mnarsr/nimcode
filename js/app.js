@@ -102,7 +102,7 @@ function initMobileMenu() {
 
   siteMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      if (window.innerWidth <= 760) setOpen(false);
+      if (window.innerWidth <= 900) setOpen(false);
     });
   });
 

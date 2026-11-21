@@ -1827,3 +1827,51 @@ a:focus-visible{
     border-radius:18px;
   }
 }
+
+/* ===== NAVIGATION: Hamburger schon bis 900 px, damit 7 Links nicht überlaufen ===== */
+
+@media (min-width: 761px) and (max-width: 900px){
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav{
+    flex-wrap:wrap;
+  }
+
+  .nav-right{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+    padding:14px 0 6px;
+    border-top:1px solid var(--border);
+  }
+
+  .nav-right.is-open{
+    display:flex;
+  }
+
+  .nav-link,
+  .nav-btn,
+  .cta{
+    width:100%;
+    text-align:center;
+  }
+
+  .nav-link{
+    font-size:.95rem;
+  }
+
+  .nav-right .cta{
+    display:flex;
+    justify-content:center;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1060px){
+  .nav-right .cta{
+    display:none;
+  }
+}
