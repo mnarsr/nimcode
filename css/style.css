@@ -1688,3 +1688,142 @@ a:focus-visible{
     width:min(260px,70%);
   }
 }
+
+/* ===== WEBSITES PAGE (/websites/) ===== */
+
+.device-stack{
+  position:relative;
+  padding:0 0 40px 0;
+}
+
+.device-desktop,
+.device-phone{
+  margin:0;
+  overflow:hidden;
+  background:var(--surface);
+  box-shadow:var(--shadow-lg);
+}
+
+.device-desktop{
+  width:88%;
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+}
+
+.device-phone{
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:30%;
+  min-width:130px;
+  border:6px solid #0b2324;
+  border-radius:26px;
+}
+
+.device-desktop img,
+.device-phone img{
+  width:100%;
+  height:auto;
+}
+
+.industry-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:20px;
+}
+
+.industry-card{
+  display:block;
+  border-radius:var(--radius-md);
+  background:var(--surface);
+}
+
+.industry-card h3{
+  margin:14px 0 0;
+}
+
+.industry-icon{
+  display:inline-grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  border-radius:14px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  font-size:1.5rem;
+}
+
+.industry-link{
+  background:var(--petrol);
+  color:#fff;
+  border-color:transparent;
+}
+
+.industry-link p{
+  color:rgba(255,255,255,.8);
+}
+
+.split-example{
+  grid-template-columns:minmax(0, 1.1fr) minmax(0, .9fr);
+}
+
+.split-package{
+  grid-template-columns:minmax(0, 1fr) minmax(0, .9fr);
+}
+
+.package-intro{
+  margin:18px 0 0;
+  color:var(--text-muted);
+  line-height:1.7;
+  max-width:52ch;
+}
+
+.package-card{
+  border-radius:var(--radius-lg);
+}
+
+.package-card ul{
+  margin:0 0 18px;
+  padding-left:20px;
+  display:grid;
+  gap:8px;
+}
+
+.package-note{
+  margin:0 0 20px;
+  font-size:.88rem;
+  opacity:.8;
+}
+
+@media (min-width: 981px){
+  .steps-4{
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px){
+  .industry-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
+  .split-example,
+  .split-package{
+    grid-template-columns:1fr;
+  }
+
+  .device-stack{
+    max-width:560px;
+  }
+}
+
+@media (max-width: 560px){
+  .industry-grid{
+    grid-template-columns:1fr;
+  }
+
+  .device-phone{
+    width:34%;
+    border-width:4px;
+    border-radius:18px;
+  }
+}
