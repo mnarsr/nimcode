@@ -1875,3 +1875,158 @@ a:focus-visible{
     display:none;
   }
 }
+
+/* ===== RATGEBER ===== */
+
+.ratgeber-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+  gap:22px;
+}
+
+.ratgeber-list{
+  padding-top:20px;
+}
+
+.ratgeber-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  color:var(--text);
+  text-decoration:none;
+  transition:transform var(--transition), box-shadow var(--transition);
+}
+
+.ratgeber-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.ratgeber-card h2{
+  font-size:1.35rem !important;
+  line-height:1.25 !important;
+}
+
+.ratgeber-card p{
+  margin:0;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+.ratgeber-more{
+  margin-top:auto;
+  font-weight:600;
+  color:var(--petrol);
+}
+
+.dark .ratgeber-more{
+  color:#8fd6c9;
+}
+
+.article{
+  padding-top:130px;
+}
+
+.article-container{
+  max-width:760px;
+}
+
+.article h1{
+  margin:0 0 14px;
+  font-size:clamp(2rem, 4.4vw, 3rem);
+  line-height:1.1;
+}
+
+.breadcrumb{
+  margin-bottom:18px;
+  font-size:.9rem;
+  color:var(--text-muted);
+}
+
+.breadcrumb a{
+  color:var(--text-muted);
+}
+
+.article-meta{
+  margin:0 0 34px;
+  color:var(--text-muted);
+  font-size:.95rem;
+}
+
+.prose{
+  font-size:1.06rem;
+  line-height:1.75;
+}
+
+.prose .lead{
+  font-size:1.2rem;
+  line-height:1.65;
+}
+
+.prose h2{
+  margin:44px 0 14px !important;
+  font-size:1.6rem !important;
+  line-height:1.2 !important;
+}
+
+.prose p{
+  margin:0 0 16px;
+}
+
+.article-steps{
+  padding-left:22px;
+  display:grid;
+  gap:12px;
+}
+
+.prompt{
+  margin:16px 0 22px;
+  padding:18px 20px;
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  overflow-x:auto;
+  white-space:pre-wrap;
+  font-size:.93rem;
+  line-height:1.6;
+}
+
+.prompt code{
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.article-note{
+  margin:22px 0;
+  padding:16px 20px;
+  border-left:4px solid #8fd6c9;
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+}
+
+.article-cta{
+  margin-top:50px;
+  padding:30px;
+  border-radius:var(--radius-md);
+  background:var(--petrol);
+  color:#fff;
+}
+
+.article-cta h2{
+  margin:0 0 10px !important;
+  font-size:1.6rem !important;
+  color:#fff;
+}
+
+.article-cta p{
+  margin:0 0 20px;
+  color:rgba(255,255,255,.85);
+}
+
+.article-cta .btn-secondary{
+  color:#fff;
+  border-color:rgba(255,255,255,.5);
+}
+
+.article-back{
+  margin-top:30px;
+}

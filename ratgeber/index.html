@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Ratgeber: Website, Google & KI für kleine Betriebe | nimcode</title>
+  <meta name="description" content="Praktische Tipps für kleine Betriebe und Restaurants in Hamburg und Bad Bramstedt: Website, Google-Profil und KI im Alltag. Kurz, verständlich, sofort umsetzbar.">
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="Ratgeber: Website, Google & KI für kleine Betriebe | nimcode">
+  <meta property="og:description" content="Praktische Tipps für kleine Betriebe und Restaurants in Hamburg und Bad Bramstedt: Website, Google-Profil und KI im Alltag. Kurz, verständlich, sofort umsetzbar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nimcode.de/ratgeber/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nimcode.de/ratgeber/">
+  <link rel="stylesheet" href="/css/style.css?v=20261123">
+  <link rel="stylesheet" href="/css/motion.css?v=20261121">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "nimcode Ratgeber",
+  "url": "https://nimcode.de/ratgeber/",
+  "inLanguage": "de",
+  "publisher": {
+    "@type": "Organization",
+    "name": "nimcode",
+    "url": "https://nimcode.de/"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Google-Bewertungen in 2 Minuten beantworten – mit KI",
+      "url": "https://nimcode.de/ratgeber/google-bewertungen-mit-ki-beantworten/",
+      "datePublished": "2026-11-23"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Restaurant: Speisekarte und Social-Media-Posts mit KI schreiben",
+      "url": "https://nimcode.de/ratgeber/restaurant-speisekarte-und-posts-mit-ki/",
+      "datePublished": "2026-11-23"
+    }
+  ]
+}
+  </script>
+  <script>
+    window.loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-BBJQE9YXKF');
+    };
+  </script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
+  </div>
+
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+      <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+        <a href="/websites/" class="nav-link" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/onlineshop/" class="nav-link" data-de="Onlineshops" data-en="Online shops">Onlineshops</a>
+        <a href="/restaurants/" class="nav-link" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" class="nav-link" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/ratgeber/" class="nav-link" aria-current="page" data-de="Ratgeber" data-en="Guides">Ratgeber</a>
+        <a href="/#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+        <a href="/#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+
+        <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+        <a href="/contact/" class="cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="gradient-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-text">
+          <span class="eyebrow">Ratgeber</span>
+          <h1>Praktische Tipps für kleine Betriebe: Website, Google und KI im Alltag</h1>
+          <p>Kurz, verständlich und sofort umsetzbar. Für Handwerker, Salons, Praxen, Läden, Vereine und Restaurants in Hamburg, Bad Bramstedt und Umgebung.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ratgeber-list">
+      <div class="container">
+        <div class="ratgeber-grid">
+          <a class="card ratgeber-card" href="/ratgeber/google-bewertungen-mit-ki-beantworten/">
+            <span class="card-kicker">KI im Alltag · 5 Min.</span>
+            <h2>Google-Bewertungen in 2 Minuten beantworten – mit KI</h2>
+            <p>Jede Antwort auf eine Bewertung zeigt neuen Kunden: Hier kümmert sich jemand. Mit KI und einer guten Vorlage dauert das keine zwei Minuten.</p>
+            <span class="ratgeber-more">Weiterlesen →</span>
+          </a>
+          <a class="card ratgeber-card" href="/ratgeber/restaurant-speisekarte-und-posts-mit-ki/">
+            <span class="card-kicker">Restaurants · 6 Min.</span>
+            <h2>Restaurant: Speisekarte und Social-Media-Posts mit KI schreiben</h2>
+            <p>Gute Gerichtbeschreibungen verkaufen. Mit KI entstehen sie in Minuten, für die Speisekarte, den Onlineshop und Instagram.</p>
+            <span class="ratgeber-more">Weiterlesen →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-strip" id="contact">
+      <div class="container contact-strip-inner">
+        <div>
+          <span class="section-kicker">Fragen?</span>
+          <h2>Sie wünschen sich ein Thema?</h2>
+          <p>Schreiben Sie mir, welche Frage Sie im Alltag beschäftigt. Die besten Fragen werden zum nächsten Artikel.</p>
+        </div>
+        <div class="contact-strip-actions">
+          <a href="/contact/" class="btn">Frage senden</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">nimcode</div>
+        <p data-de="Web, Software und Automatisierung für moderne Unternehmen." data-en="Web, software, and automation for modern businesses.">Web, Software und Automatisierung für moderne Unternehmen.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/websites/" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/onlineshop/" data-de="Onlineshops" data-en="Online shops">Onlineshops</a>
+        <a href="/restaurants/" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/ratgeber/" data-de="Ratgeber" data-en="Guides">Ratgeber</a>
+        <a href="/#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© nimcode</span>
+    </div>
+  </footer>
+
+  <a href="/contact/" class="floating-cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js?v=20261122" defer></script>
+  <script src="/js/motion.js?v=20261121" defer></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
