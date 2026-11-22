@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("nimcode-theme");
+      if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3D3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Restaurant: Speisekarte und Social-Media-Posts mit KI schreiben | nimcode Ratgeber</title>
+  <meta name="description" content="Wie Restaurants und Lieferdienste mit ChatGPT & Co. appetitliche Gerichtbeschreibungen, Aktionen und Instagram-Posts schreiben. Mit Vorlagen und Grenzen.">
+  <meta name="author" content="nimcode">
+
+  <meta property="og:title" content="Restaurant: Speisekarte und Social-Media-Posts mit KI schreiben | nimcode Ratgeber">
+  <meta property="og:description" content="Wie Restaurants und Lieferdienste mit ChatGPT & Co. appetitliche Gerichtbeschreibungen, Aktionen und Instagram-Posts schreiben. Mit Vorlagen und Grenzen.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nimcode.de/ratgeber/restaurant-speisekarte-und-posts-mit-ki/">
+  <meta property="og:site_name" content="nimcode">
+  <meta property="og:image" content="https://nimcode.de/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nimcode.de/ratgeber/restaurant-speisekarte-und-posts-mit-ki/">
+  <link rel="stylesheet" href="/css/style.css?v=20261123">
+  <link rel="stylesheet" href="/css/motion.css?v=20261121">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Restaurant: Speisekarte und Social-Media-Posts mit KI schreiben",
+  "description": "Wie Restaurants und Lieferdienste mit ChatGPT & Co. appetitliche Gerichtbeschreibungen, Aktionen und Instagram-Posts schreiben. Mit Vorlagen und Grenzen.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "inLanguage": "de",
+  "author": {
+    "@type": "Person",
+    "name": "Manar Sras",
+    "url": "https://nimcode.de/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "nimcode",
+    "url": "https://nimcode.de/"
+  },
+  "mainEntityOfPage": "https://nimcode.de/ratgeber/restaurant-speisekarte-und-posts-mit-ki/",
+  "image": "https://nimcode.de/og-image.jpg"
+}
+  </script>
+  <script>
+    window.loadGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BBJQE9YXKF';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-BBJQE9YXKF');
+    };
+  </script>
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">nimcode</div>
+  </div>
+
+  <header class="header glass">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="nimcode Startseite">nimcode</a>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="siteMenu">☰</button>
+
+      <nav class="nav-right" id="siteMenu" aria-label="Hauptnavigation">
+        <a href="/websites/" class="nav-link" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/onlineshop/" class="nav-link" data-de="Onlineshops" data-en="Online shops">Onlineshops</a>
+        <a href="/restaurants/" class="nav-link" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" class="nav-link" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/ratgeber/" class="nav-link" aria-current="page" data-de="Ratgeber" data-en="Guides">Ratgeber</a>
+        <a href="/#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="/#pricing" class="nav-link" data-de="Pakete" data-en="Packages">Pakete</a>
+        <a href="/#portfolio" class="nav-link" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+
+        <button id="langToggle" class="nav-btn" type="button" aria-label="Sprache wechseln">EN</button>
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Dark Mode umschalten" aria-pressed="false">🌙</button>
+        <a href="/contact/" class="cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="section article">
+      <div class="container article-container">
+        <nav class="breadcrumb" aria-label="Brotkrümelnavigation"><a href="/">Start</a> › <a href="/ratgeber/">Ratgeber</a> › <span>Speisekarte und Posts mit KI</span></nav>
+        <span class="section-kicker">Restaurants</span>
+        <h1>Restaurant: Speisekarte und Social-Media-Posts mit KI schreiben</h1>
+        <p class="article-meta"><time datetime="2026-11-23">23. November 2026</time> · Lesezeit 6 Min. · von Manar Sras, nimcode</p>
+        <div class="prose">
+
+<p class="lead">„Pizza Salami – Tomatensoße, Käse, Salami“: So stehen viele Gerichte auf Speisekarten und in Bestellsystemen. Das ist korrekt, macht aber keinen Appetit. KI kann Ihnen helfen, kurze und ehrliche Beschreibungen zu schreiben, die Lust auf Bestellen machen.</p>
+
+<h2>1. Gerichtbeschreibungen für Speisekarte und Onlineshop</h2>
+<pre class="prompt"><code>Du schreibst für ein Restaurant: [Name, Küche, Ort, z. B. „italienischer Lieferdienst in Bad Bramstedt“].
+Schreibe für jedes Gericht eine Beschreibung mit höchstens 15 Wörtern.
+Regeln: appetitlich, aber ehrlich. Nur Zutaten nennen, die ich angebe. Keine Übertreibungen wie „das beste der Stadt“.
+
+Gerichte:
+- Pizza Salami: Tomatensoße, Mozzarella, Rindersalami
+- Penne Arrabbiata: Tomatensoße, Knoblauch, Chili, Petersilie
+- [weitere Gerichte]</code></pre>
+
+<div class="article-note">
+  <strong>Wichtig:</strong> Allergene und Zusatzstoffe müssen Sie selbst prüfen und angeben. Die KI kennt Ihre Rezepte und Lieferanten nicht, verlassen Sie sich hier nie auf sie.
+</div>
+
+<h2>2. Aktionen und Wochenangebote</h2>
+<pre class="prompt"><code>Schreibe 3 kurze Varianten für eine Aktion meines Restaurants [Name].
+Aktion: [z. B. „Jeden Dienstag 2 Pizzen zum Preis von 1,5 bei Abholung“].
+Zielgruppe: Familien und Berufstätige aus [Ort]. Ton: freundlich, locker, per „du“.
+Jede Variante höchstens 2 Sätze, mit einer klaren Aufforderung (bestellen, anrufen, vorbeikommen).</code></pre>
+
+<h2>3. Instagram- und Facebook-Posts</h2>
+<pre class="prompt"><code>Schreibe einen Instagram-Post für mein Restaurant [Name] in [Ort].
+Thema: [z. B. „neue hausgemachte Lasagne ab Freitag“].
+Aufbau: eine kurze Frage oder Aussage als Einstieg, 2–3 Sätze, eine Aufforderung zum Bestellen,
+5 passende Hashtags (davon 2 mit Ortsbezug). Ohne übertriebene Emojis.</code></pre>
+
+<p>Das Wichtigste bleibt aber ein <strong>echtes Foto</strong> von Ihrem Essen. Ein gutes Handyfoto bei Tageslicht wirkt viel besser als ein KI-Bild. KI-Bilder von Gerichten wecken falsche Erwartungen und kommen bei Gästen oft schlecht an.</p>
+
+<h2>4. Mehrsprachig in einem Schritt</h2>
+<p>Haben Sie viele Gäste, die Englisch, Arabisch oder Türkisch sprechen? Lassen Sie die fertigen Texte übersetzen und von jemandem gegenlesen, der die Sprache gut spricht. Die KI übersetzt Speisen manchmal zu wörtlich.</p>
+
+<h2>Was KI nicht für Sie erledigt</h2>
+<ul class="check-list">
+  <li>Preise, Allergene und Öffnungszeiten aktuell halten</li>
+  <li>gute Fotos machen</li>
+  <li>regelmäßig posten: Ein fester Wochenplan hilft mehr als das beste Tool</li>
+</ul>
+
+<h2>Fazit</h2>
+<p>Nehmen Sie sich einmal eine Stunde Zeit und lassen Sie die KI Ihre ganze Speisekarte überarbeiten. Danach prüfen Sie jede Zeile und übernehmen die Texte in Ihre Speisekarte, Ihren Onlineshop und Ihr Google-Profil.</p>
+
+        </div>
+
+        <aside class="article-cta">
+          <h2>Eigenes Bestellsystem ohne Provision</h2>
+          <p>Ihre neuen Texte gehören auf Ihre eigene Bestellseite, nicht nur auf Plattformen mit Provision. Ich zeige Ihnen, wie das aussieht.</p>
+          <div class="hero-actions">
+            <a href="/contact/" class="btn">Kostenlos anfragen</a>
+            <a href="/restaurants/" class="btn btn-secondary">Bestellsystem für Restaurants</a>
+          </div>
+        </aside>
+
+        <p class="article-back"><a href="/ratgeber/">← Alle Ratgeber-Artikel</a></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">nimcode</div>
+        <p data-de="Web, Software und Automatisierung für moderne Unternehmen." data-en="Web, software, and automation for modern businesses.">Web, Software und Automatisierung für moderne Unternehmen.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/websites/" data-de="Websites" data-en="Websites">Websites</a>
+        <a href="/onlineshop/" data-de="Onlineshops" data-en="Online shops">Onlineshops</a>
+        <a href="/restaurants/" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+        <a href="/demo/" data-de="Live-Demo" data-en="Live demo">Live-Demo</a>
+        <a href="/ratgeber/" data-de="Ratgeber" data-en="Guides">Ratgeber</a>
+        <a href="/#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="/contact/" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="#" id="cookieSettings" data-de="Cookie-Einstellungen" data-en="Cookie settings">Cookie-Einstellungen</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/manar-sras/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.xing.com/profile/Manar_Sras/" rel="noopener noreferrer">XING</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© nimcode</span>
+    </div>
+  </footer>
+
+  <a href="/contact/" class="floating-cta" data-de="Projekt anfragen" data-en="Request project">Projekt anfragen</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+    <p>
+      Diese Website verwendet Cookies für Analysezwecke.
+      <a href="/datenschutz.html">Mehr erfahren</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" id="declineCookies">Ablehnen</button>
+      <button type="button" id="acceptCookies">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js?v=20261122" defer></script>
+  <script src="/js/motion.js?v=20261121" defer></script>
+  <script defer data-domain="nimcode.de" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
